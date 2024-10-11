@@ -1372,3 +1372,2382 @@ Server: pve-api-daemon/3.0
 {"data":[]}
 [90mThu, 10 Oct 2024 20:00:12 -0500[0m [32mINF[0m [1mgithub.com/Telmate/terraform-provider-proxmox/v2/proxmox/util.go:158[0m[36m >[0m [1mEnabling the capture of log-library logs as ithe _capturelog flag was detected[0m
 [90mThu, 10 Oct 2024 20:00:12 -0500[0m [32mINF[0m [1mgithub.com/Telmate/terraform-provider-proxmox/v2/proxmox/util.go:191[0m[36m >[0m [1mLogging Started. Root Logger Set to level debug[0m
+[90mFri, 11 Oct 2024 00:17:46 -0500[0m [32mINF[0m [1mgithub.com/Telmate/terraform-provider-proxmox/v2/proxmox/util.go:158[0m[36m >[0m [1mEnabling the capture of log-library logs as ithe _capturelog flag was detected[0m
+[90mFri, 11 Oct 2024 00:17:46 -0500[0m [32mINF[0m [1mgithub.com/Telmate/terraform-provider-proxmox/v2/proxmox/util.go:191[0m[36m >[0m [1mLogging Started. Root Logger Set to level debug[0m
+2024/10/11 00:17:46 >>>>>>>>>> REQUEST:
+GET /api2/json/cluster/resources?type=vm HTTP/1.1
+Host: 192.168.2.18:8006
+User-Agent: Go-http-client/1.1
+Accept: application/json
+Authorization: PVEAPIToken=root@pam!terraform=bdeb84a5-2cc6-4b12-a135-e6b81d88366c
+Accept-Encoding: gzip
+
+2024/10/11 00:17:46 <<<<<<<<<< RESULT:
+HTTP/1.1 200 OK
+Content-Length: 1061
+Cache-Control: max-age=0
+Connection: Keep-Alive
+Content-Type: application/json;charset=UTF-8
+Date: Fri, 11 Oct 2024 05:17:56 GMT
+Expires: Fri, 11 Oct 2024 05:17:56 GMT
+Pragma: no-cache
+Server: pve-api-daemon/3.0
+
+{"data":[{"diskread":0,"netin":0,"maxmem":8518631424,"uptime":0,"type":"qemu","disk":0,"vmid":100,"diskwrite":0,"status":"stopped","mem":0,"cpu":0,"maxdisk":214748364800,"maxcpu":4,"netout":0,"template":0,"node":"pve","id":"qemu/100","name":"DevMachine"},{"status":"stopped","mem":0,"cpu":0,"maxcpu":4,"maxdisk":214748364800,"netout":0,"node":"pve","template":0,"id":"qemu/101","name":"GithubActions","diskread":0,"netin":0,"maxmem":8518631424,"uptime":0,"type":"qemu","disk":0,"vmid":101,"diskwrite":0},{"diskwrite":0,"vmid":102,"disk":0,"type":"qemu","uptime":0,"maxmem":4294967296,"netin":0,"diskread":0,"name":"JiraOpenSource","id":"qemu/102","template":0,"node":"pve","netout":0,"maxdisk":34359738368,"maxcpu":2,"cpu":0,"mem":0,"status":"stopped"},{"type":"lxc","uptime":14790,"disk":1749016576,"vmid":103,"diskwrite":27066368,"diskread":915881984,"netin":1561198,"maxmem":536870912,"template":0,"node":"pve","id":"lxc/103","name":"lxc-huly-srv","status":"running","mem":72454144,"cpu":2.6907183284093e-05,"maxdisk":8350298112,"maxcpu":4,"netout":169736}]}
+2024/10/11 00:17:46 >>>>>>>>>> REQUEST:
+GET /api2/json/nodes/pve/lxc/103/config HTTP/1.1
+Host: 192.168.2.18:8006
+User-Agent: Go-http-client/1.1
+Accept: application/json
+Authorization: PVEAPIToken=root@pam!terraform=bdeb84a5-2cc6-4b12-a135-e6b81d88366c
+Accept-Encoding: gzip
+
+2024/10/11 00:17:46 <<<<<<<<<< RESULT:
+HTTP/1.1 200 OK
+Content-Length: 418
+Cache-Control: max-age=0
+Connection: Keep-Alive
+Content-Type: application/json;charset=UTF-8
+Date: Fri, 11 Oct 2024 05:17:56 GMT
+Expires: Fri, 11 Oct 2024 05:17:56 GMT
+Pragma: no-cache
+Server: pve-api-daemon/3.0
+
+{"data":{"memory":512,"ostype":"ubuntu","cmode":"tty","net0":"name=eth0,bridge=vmbr0,gw=192.168.2.1,hwaddr=EA:8E:DA:62:21:A2,ip=192.168.2.30/24,type=veth","cpuunits":1024,"rootfs":"local-lvm:vm-103-disk-0,size=8G","features":"nesting=1","digest":"43f7211b790f3f8233840a4093b9749a67b8383a","arch":"amd64","protection":0,"onboot":1,"swap":0,"console":1,"cpulimit":"0","tty":2,"unprivileged":1,"hostname":"lxc-huly-srv"}}
+2024/10/11 00:17:46 >>>>>>>>>> REQUEST:
+GET /api2/json/cluster/ha/resources/103 HTTP/1.1
+Host: 192.168.2.18:8006
+User-Agent: Go-http-client/1.1
+Accept: application/json
+Authorization: PVEAPIToken=root@pam!terraform=bdeb84a5-2cc6-4b12-a135-e6b81d88366c
+Accept-Encoding: gzip
+
+2024/10/11 00:17:46 <<<<<<<<<< RESULT:
+HTTP/1.1 500 no such resource 'ct:103'
+Connection: close
+Content-Length: 13
+Cache-Control: max-age=0
+Content-Type: application/json;charset=UTF-8
+Date: Fri, 11 Oct 2024 05:17:56 GMT
+Expires: Fri, 11 Oct 2024 05:17:56 GMT
+Pragma: no-cache
+Server: pve-api-daemon/3.0
+
+{"data":null}
+2024/10/11 00:17:46 >>>>>>>>>> REQUEST:
+GET /api2/json/pools HTTP/1.1
+Host: 192.168.2.18:8006
+User-Agent: Go-http-client/1.1
+Accept: application/json
+Authorization: PVEAPIToken=root@pam!terraform=bdeb84a5-2cc6-4b12-a135-e6b81d88366c
+Accept-Encoding: gzip
+
+2024/10/11 00:17:46 <<<<<<<<<< RESULT:
+HTTP/1.1 200 OK
+Content-Length: 11
+Cache-Control: max-age=0
+Connection: Keep-Alive
+Content-Type: application/json;charset=UTF-8
+Date: Fri, 11 Oct 2024 05:17:56 GMT
+Expires: Fri, 11 Oct 2024 05:17:56 GMT
+Pragma: no-cache
+Server: pve-api-daemon/3.0
+
+{"data":[]}
+[90mFri, 11 Oct 2024 00:17:46 -0500[0m [32mINF[0m [1mgithub.com/Telmate/terraform-provider-proxmox/v2/proxmox/util.go:158[0m[36m >[0m [1mEnabling the capture of log-library logs as ithe _capturelog flag was detected[0m
+[90mFri, 11 Oct 2024 00:17:46 -0500[0m [32mINF[0m [1mgithub.com/Telmate/terraform-provider-proxmox/v2/proxmox/util.go:191[0m[36m >[0m [1mLogging Started. Root Logger Set to level debug[0m
+2024/10/11 00:17:46 >>>>>>>>>> REQUEST:
+GET /api2/json/cluster/resources?type=vm HTTP/1.1
+Host: 192.168.2.18:8006
+User-Agent: Go-http-client/1.1
+Accept: application/json
+Authorization: PVEAPIToken=root@pam!terraform=bdeb84a5-2cc6-4b12-a135-e6b81d88366c
+Accept-Encoding: gzip
+
+2024/10/11 00:17:46 <<<<<<<<<< RESULT:
+HTTP/1.1 200 OK
+Content-Length: 1061
+Cache-Control: max-age=0
+Connection: Keep-Alive
+Content-Type: application/json;charset=UTF-8
+Date: Fri, 11 Oct 2024 05:17:56 GMT
+Expires: Fri, 11 Oct 2024 05:17:56 GMT
+Pragma: no-cache
+Server: pve-api-daemon/3.0
+
+{"data":[{"vmid":100,"diskwrite":0,"type":"qemu","uptime":0,"disk":0,"maxmem":8518631424,"diskread":0,"netin":0,"id":"qemu/100","name":"DevMachine","template":0,"node":"pve","cpu":0,"netout":0,"maxdisk":214748364800,"maxcpu":4,"mem":0,"status":"stopped"},{"maxmem":8518631424,"netin":0,"diskread":0,"diskwrite":0,"vmid":101,"disk":0,"type":"qemu","uptime":0,"netout":0,"maxdisk":214748364800,"maxcpu":4,"cpu":0,"status":"stopped","mem":0,"name":"GithubActions","id":"qemu/101","node":"pve","template":0},{"id":"qemu/102","name":"JiraOpenSource","node":"pve","template":0,"cpu":0,"netout":0,"maxdisk":34359738368,"maxcpu":2,"mem":0,"status":"stopped","vmid":102,"diskwrite":0,"type":"qemu","uptime":0,"disk":0,"maxmem":4294967296,"diskread":0,"netin":0},{"type":"lxc","uptime":14790,"disk":1749016576,"vmid":103,"diskwrite":27066368,"diskread":915881984,"netin":1561198,"maxmem":536870912,"node":"pve","template":0,"id":"lxc/103","name":"lxc-huly-srv","status":"running","mem":72454144,"cpu":2.6907183284093e-05,"netout":169736,"maxdisk":8350298112,"maxcpu":4}]}
+2024/10/11 00:17:46 >>>>>>>>>> REQUEST:
+PUT /api2/json/nodes/pve/lxc/103/config HTTP/1.1
+Host: 192.168.2.18:8006
+User-Agent: Go-http-client/1.1
+Content-Length: 158
+Accept: application/json
+Authorization: PVEAPIToken=root@pam!terraform=bdeb84a5-2cc6-4b12-a135-e6b81d88366c
+Content-Type: application/x-www-form-urlencoded
+Accept-Encoding: gzip
+
+arch=amd64&cmode=tty&console=1&cpulimit=0&cpuunits=1024&features=nesting%3D1&hostname=lxc-huly-srv&memory=512&onboot=1&ostype=ubuntu&protection=0&swap=0&tty=2
+2024/10/11 00:17:46 <<<<<<<<<< RESULT:
+HTTP/1.1 200 OK
+Content-Length: 13
+Cache-Control: max-age=0
+Connection: Keep-Alive
+Connection: Keep-Alive
+Content-Type: application/json;charset=UTF-8
+Date: Fri, 11 Oct 2024 05:17:56 GMT
+Expires: Fri, 11 Oct 2024 05:17:56 GMT
+Pragma: no-cache
+Server: pve-api-daemon/3.0
+
+{"data":null}
+2024/10/11 00:17:46 >>>>>>>>>> REQUEST:
+GET /api2/json/cluster/resources?type=vm HTTP/1.1
+Host: 192.168.2.18:8006
+User-Agent: Go-http-client/1.1
+Accept: application/json
+Authorization: PVEAPIToken=root@pam!terraform=bdeb84a5-2cc6-4b12-a135-e6b81d88366c
+Accept-Encoding: gzip
+
+2024/10/11 00:17:46 <<<<<<<<<< RESULT:
+HTTP/1.1 200 OK
+Content-Length: 1061
+Cache-Control: max-age=0
+Connection: Keep-Alive
+Content-Type: application/json;charset=UTF-8
+Date: Fri, 11 Oct 2024 05:17:56 GMT
+Expires: Fri, 11 Oct 2024 05:17:56 GMT
+Pragma: no-cache
+Server: pve-api-daemon/3.0
+
+{"data":[{"netout":0,"maxcpu":4,"maxdisk":214748364800,"cpu":0,"mem":0,"status":"stopped","name":"DevMachine","id":"qemu/100","template":0,"node":"pve","maxmem":8518631424,"netin":0,"diskread":0,"diskwrite":0,"vmid":100,"disk":0,"uptime":0,"type":"qemu"},{"diskread":0,"netin":0,"maxmem":8518631424,"type":"qemu","uptime":0,"disk":0,"vmid":101,"diskwrite":0,"mem":0,"status":"stopped","cpu":0,"maxcpu":4,"maxdisk":214748364800,"netout":0,"template":0,"node":"pve","id":"qemu/101","name":"GithubActions"},{"cpu":0,"netout":0,"maxcpu":2,"maxdisk":34359738368,"mem":0,"status":"stopped","id":"qemu/102","name":"JiraOpenSource","template":0,"node":"pve","maxmem":4294967296,"diskread":0,"netin":0,"vmid":102,"diskwrite":0,"type":"qemu","uptime":0,"disk":0},{"node":"pve","template":0,"name":"lxc-huly-srv","id":"lxc/103","mem":72454144,"status":"running","maxdisk":8350298112,"maxcpu":4,"netout":169736,"cpu":2.6907183284093e-05,"disk":1749016576,"type":"lxc","uptime":14790,"diskwrite":27066368,"vmid":103,"netin":1561198,"diskread":915881984,"maxmem":536870912}]}
+2024/10/11 00:17:46 >>>>>>>>>> REQUEST:
+GET /api2/json/nodes/pve/lxc/103/config HTTP/1.1
+Host: 192.168.2.18:8006
+User-Agent: Go-http-client/1.1
+Accept: application/json
+Authorization: PVEAPIToken=root@pam!terraform=bdeb84a5-2cc6-4b12-a135-e6b81d88366c
+Accept-Encoding: gzip
+
+2024/10/11 00:17:46 <<<<<<<<<< RESULT:
+HTTP/1.1 200 OK
+Content-Length: 418
+Cache-Control: max-age=0
+Connection: Keep-Alive
+Content-Type: application/json;charset=UTF-8
+Date: Fri, 11 Oct 2024 05:17:56 GMT
+Expires: Fri, 11 Oct 2024 05:17:56 GMT
+Pragma: no-cache
+Server: pve-api-daemon/3.0
+
+{"data":{"cpuunits":1024,"net0":"name=eth0,bridge=vmbr0,gw=192.168.2.1,hwaddr=EA:8E:DA:62:21:A2,ip=192.168.2.30/24,type=veth","cmode":"tty","ostype":"ubuntu","memory":512,"protection":0,"arch":"amd64","digest":"43f7211b790f3f8233840a4093b9749a67b8383a","features":"nesting=1","rootfs":"local-lvm:vm-103-disk-0,size=8G","console":1,"swap":0,"onboot":1,"hostname":"lxc-huly-srv","tty":2,"unprivileged":1,"cpulimit":"0"}}
+2024/10/11 00:17:46 >>>>>>>>>> REQUEST:
+GET /api2/json/cluster/ha/resources/103 HTTP/1.1
+Host: 192.168.2.18:8006
+User-Agent: Go-http-client/1.1
+Accept: application/json
+Authorization: PVEAPIToken=root@pam!terraform=bdeb84a5-2cc6-4b12-a135-e6b81d88366c
+Accept-Encoding: gzip
+
+2024/10/11 00:17:46 <<<<<<<<<< RESULT:
+HTTP/1.1 500 no such resource 'ct:103'
+Connection: close
+Content-Length: 13
+Cache-Control: max-age=0
+Content-Type: application/json;charset=UTF-8
+Date: Fri, 11 Oct 2024 05:17:56 GMT
+Expires: Fri, 11 Oct 2024 05:17:56 GMT
+Pragma: no-cache
+Server: pve-api-daemon/3.0
+
+{"data":null}
+2024/10/11 00:17:46 >>>>>>>>>> REQUEST:
+GET /api2/json/pools HTTP/1.1
+Host: 192.168.2.18:8006
+User-Agent: Go-http-client/1.1
+Accept: application/json
+Authorization: PVEAPIToken=root@pam!terraform=bdeb84a5-2cc6-4b12-a135-e6b81d88366c
+Accept-Encoding: gzip
+
+2024/10/11 00:17:46 <<<<<<<<<< RESULT:
+HTTP/1.1 200 OK
+Content-Length: 11
+Cache-Control: max-age=0
+Connection: Keep-Alive
+Content-Type: application/json;charset=UTF-8
+Date: Fri, 11 Oct 2024 05:17:56 GMT
+Expires: Fri, 11 Oct 2024 05:17:56 GMT
+Pragma: no-cache
+Server: pve-api-daemon/3.0
+
+{"data":[]}
+[90mFri, 11 Oct 2024 00:19:55 -0500[0m [32mINF[0m [1mgithub.com/Telmate/terraform-provider-proxmox/v2/proxmox/util.go:158[0m[36m >[0m [1mEnabling the capture of log-library logs as ithe _capturelog flag was detected[0m
+[90mFri, 11 Oct 2024 00:19:55 -0500[0m [32mINF[0m [1mgithub.com/Telmate/terraform-provider-proxmox/v2/proxmox/util.go:191[0m[36m >[0m [1mLogging Started. Root Logger Set to level debug[0m
+2024/10/11 00:19:55 >>>>>>>>>> REQUEST:
+GET /api2/json/cluster/resources?type=vm HTTP/1.1
+Host: 192.168.2.18:8006
+User-Agent: Go-http-client/1.1
+Accept: application/json
+Authorization: PVEAPIToken=root@pam!terraform=bdeb84a5-2cc6-4b12-a135-e6b81d88366c
+Accept-Encoding: gzip
+
+2024/10/11 00:19:55 <<<<<<<<<< RESULT:
+HTTP/1.1 200 OK
+Content-Length: 1065
+Cache-Control: max-age=0
+Connection: Keep-Alive
+Content-Type: application/json;charset=UTF-8
+Date: Fri, 11 Oct 2024 05:20:05 GMT
+Expires: Fri, 11 Oct 2024 05:20:05 GMT
+Pragma: no-cache
+Server: pve-api-daemon/3.0
+
+{"data":[{"netin":0,"diskread":0,"maxmem":8518631424,"disk":0,"type":"qemu","uptime":0,"diskwrite":0,"vmid":100,"mem":0,"status":"stopped","netout":0,"maxcpu":4,"maxdisk":214748364800,"cpu":0,"template":0,"node":"pve","name":"DevMachine","id":"qemu/100"},{"vmid":101,"diskwrite":0,"uptime":0,"type":"qemu","disk":0,"maxmem":8518631424,"diskread":0,"netin":0,"id":"qemu/101","name":"GithubActions","template":0,"node":"pve","cpu":0,"netout":0,"maxdisk":214748364800,"maxcpu":4,"mem":0,"status":"stopped"},{"template":0,"node":"pve","name":"JiraOpenSource","id":"qemu/102","mem":0,"status":"stopped","netout":0,"maxdisk":34359738368,"maxcpu":2,"cpu":0,"disk":0,"type":"qemu","uptime":0,"diskwrite":0,"vmid":102,"netin":0,"diskread":0,"maxmem":4294967296},{"node":"pve","template":0,"id":"lxc/103","name":"lxc-huly-srv","status":"running","mem":86048768,"cpu":0.00026922405417674,"maxcpu":4,"maxdisk":8350298112,"netout":426598,"uptime":14920,"type":"lxc","disk":1750573056,"vmid":103,"diskwrite":1420607488,"diskread":2836398080,"netin":12316735,"maxmem":536870912}]}
+2024/10/11 00:19:55 >>>>>>>>>> REQUEST:
+GET /api2/json/nodes/pve/lxc/103/config HTTP/1.1
+Host: 192.168.2.18:8006
+User-Agent: Go-http-client/1.1
+Accept: application/json
+Authorization: PVEAPIToken=root@pam!terraform=bdeb84a5-2cc6-4b12-a135-e6b81d88366c
+Accept-Encoding: gzip
+
+2024/10/11 00:19:55 <<<<<<<<<< RESULT:
+HTTP/1.1 200 OK
+Content-Length: 418
+Cache-Control: max-age=0
+Connection: Keep-Alive
+Content-Type: application/json;charset=UTF-8
+Date: Fri, 11 Oct 2024 05:20:05 GMT
+Expires: Fri, 11 Oct 2024 05:20:05 GMT
+Pragma: no-cache
+Server: pve-api-daemon/3.0
+
+{"data":{"onboot":1,"swap":0,"console":1,"cpulimit":"0","unprivileged":1,"tty":2,"hostname":"lxc-huly-srv","memory":512,"ostype":"ubuntu","net0":"name=eth0,bridge=vmbr0,gw=192.168.2.1,hwaddr=EA:8E:DA:62:21:A2,ip=192.168.2.30/24,type=veth","cmode":"tty","cpuunits":1024,"features":"nesting=1","arch":"amd64","digest":"43f7211b790f3f8233840a4093b9749a67b8383a","rootfs":"local-lvm:vm-103-disk-0,size=8G","protection":0}}
+2024/10/11 00:19:55 >>>>>>>>>> REQUEST:
+GET /api2/json/cluster/ha/resources/103 HTTP/1.1
+Host: 192.168.2.18:8006
+User-Agent: Go-http-client/1.1
+Accept: application/json
+Authorization: PVEAPIToken=root@pam!terraform=bdeb84a5-2cc6-4b12-a135-e6b81d88366c
+Accept-Encoding: gzip
+
+2024/10/11 00:19:55 <<<<<<<<<< RESULT:
+HTTP/1.1 500 no such resource 'ct:103'
+Connection: close
+Content-Length: 13
+Cache-Control: max-age=0
+Content-Type: application/json;charset=UTF-8
+Date: Fri, 11 Oct 2024 05:20:05 GMT
+Expires: Fri, 11 Oct 2024 05:20:05 GMT
+Pragma: no-cache
+Server: pve-api-daemon/3.0
+
+{"data":null}
+2024/10/11 00:19:55 >>>>>>>>>> REQUEST:
+GET /api2/json/pools HTTP/1.1
+Host: 192.168.2.18:8006
+User-Agent: Go-http-client/1.1
+Accept: application/json
+Authorization: PVEAPIToken=root@pam!terraform=bdeb84a5-2cc6-4b12-a135-e6b81d88366c
+Accept-Encoding: gzip
+
+2024/10/11 00:19:55 <<<<<<<<<< RESULT:
+HTTP/1.1 200 OK
+Content-Length: 11
+Cache-Control: max-age=0
+Connection: Keep-Alive
+Content-Type: application/json;charset=UTF-8
+Date: Fri, 11 Oct 2024 05:20:05 GMT
+Expires: Fri, 11 Oct 2024 05:20:05 GMT
+Pragma: no-cache
+Server: pve-api-daemon/3.0
+
+{"data":[]}
+[90mFri, 11 Oct 2024 00:19:56 -0500[0m [32mINF[0m [1mgithub.com/Telmate/terraform-provider-proxmox/v2/proxmox/util.go:158[0m[36m >[0m [1mEnabling the capture of log-library logs as ithe _capturelog flag was detected[0m
+[90mFri, 11 Oct 2024 00:19:56 -0500[0m [32mINF[0m [1mgithub.com/Telmate/terraform-provider-proxmox/v2/proxmox/util.go:191[0m[36m >[0m [1mLogging Started. Root Logger Set to level debug[0m
+[90mFri, 11 Oct 2024 00:20:56 -0500[0m [32mINF[0m [1mgithub.com/Telmate/terraform-provider-proxmox/v2/proxmox/util.go:158[0m[36m >[0m [1mEnabling the capture of log-library logs as ithe _capturelog flag was detected[0m
+[90mFri, 11 Oct 2024 00:20:56 -0500[0m [32mINF[0m [1mgithub.com/Telmate/terraform-provider-proxmox/v2/proxmox/util.go:191[0m[36m >[0m [1mLogging Started. Root Logger Set to level debug[0m
+2024/10/11 00:20:56 >>>>>>>>>> REQUEST:
+GET /api2/json/cluster/resources?type=vm HTTP/1.1
+Host: 192.168.2.18:8006
+User-Agent: Go-http-client/1.1
+Accept: application/json
+Authorization: PVEAPIToken=root@pam!terraform=bdeb84a5-2cc6-4b12-a135-e6b81d88366c
+Accept-Encoding: gzip
+
+2024/10/11 00:20:56 <<<<<<<<<< RESULT:
+HTTP/1.1 200 OK
+Content-Length: 1066
+Cache-Control: max-age=0
+Connection: Keep-Alive
+Content-Type: application/json;charset=UTF-8
+Date: Fri, 11 Oct 2024 05:21:05 GMT
+Expires: Fri, 11 Oct 2024 05:21:05 GMT
+Pragma: no-cache
+Server: pve-api-daemon/3.0
+
+{"data":[{"id":"qemu/100","name":"DevMachine","node":"pve","template":0,"cpu":0,"maxdisk":214748364800,"maxcpu":4,"netout":0,"mem":0,"status":"stopped","vmid":100,"diskwrite":0,"uptime":0,"type":"qemu","disk":0,"maxmem":8518631424,"diskread":0,"netin":0},{"mem":0,"status":"stopped","maxcpu":4,"maxdisk":214748364800,"netout":0,"cpu":0,"template":0,"node":"pve","name":"GithubActions","id":"qemu/101","netin":0,"diskread":0,"maxmem":8518631424,"disk":0,"uptime":0,"type":"qemu","diskwrite":0,"vmid":101},{"status":"stopped","mem":0,"cpu":0,"maxcpu":2,"maxdisk":34359738368,"netout":0,"template":0,"node":"pve","id":"qemu/102","name":"JiraOpenSource","diskread":0,"netin":0,"maxmem":4294967296,"uptime":0,"type":"qemu","disk":0,"vmid":102,"diskwrite":0},{"maxcpu":4,"maxdisk":8350298112,"netout":529447,"cpu":0.000218898233859475,"mem":89759744,"status":"running","name":"lxc-huly-srv","id":"lxc/103","template":0,"node":"pve","maxmem":536870912,"netin":13886216,"diskread":4428316672,"diskwrite":2323333120,"vmid":103,"disk":1750585344,"type":"lxc","uptime":14981}]}
+2024/10/11 00:20:56 >>>>>>>>>> REQUEST:
+GET /api2/json/nodes/pve/lxc/103/config HTTP/1.1
+Host: 192.168.2.18:8006
+User-Agent: Go-http-client/1.1
+Accept: application/json
+Authorization: PVEAPIToken=root@pam!terraform=bdeb84a5-2cc6-4b12-a135-e6b81d88366c
+Accept-Encoding: gzip
+
+2024/10/11 00:20:56 <<<<<<<<<< RESULT:
+HTTP/1.1 200 OK
+Content-Length: 418
+Cache-Control: max-age=0
+Connection: Keep-Alive
+Content-Type: application/json;charset=UTF-8
+Date: Fri, 11 Oct 2024 05:21:05 GMT
+Expires: Fri, 11 Oct 2024 05:21:05 GMT
+Pragma: no-cache
+Server: pve-api-daemon/3.0
+
+{"data":{"cpulimit":"0","unprivileged":1,"tty":2,"hostname":"lxc-huly-srv","swap":0,"onboot":1,"console":1,"rootfs":"local-lvm:vm-103-disk-0,size=8G","features":"nesting=1","arch":"amd64","digest":"43f7211b790f3f8233840a4093b9749a67b8383a","protection":0,"memory":512,"net0":"name=eth0,bridge=vmbr0,gw=192.168.2.1,hwaddr=EA:8E:DA:62:21:A2,ip=192.168.2.30/24,type=veth","ostype":"ubuntu","cmode":"tty","cpuunits":1024}}
+2024/10/11 00:20:56 >>>>>>>>>> REQUEST:
+GET /api2/json/cluster/ha/resources/103 HTTP/1.1
+Host: 192.168.2.18:8006
+User-Agent: Go-http-client/1.1
+Accept: application/json
+Authorization: PVEAPIToken=root@pam!terraform=bdeb84a5-2cc6-4b12-a135-e6b81d88366c
+Accept-Encoding: gzip
+
+2024/10/11 00:20:56 <<<<<<<<<< RESULT:
+HTTP/1.1 500 no such resource 'ct:103'
+Connection: close
+Content-Length: 13
+Cache-Control: max-age=0
+Content-Type: application/json;charset=UTF-8
+Date: Fri, 11 Oct 2024 05:21:05 GMT
+Expires: Fri, 11 Oct 2024 05:21:05 GMT
+Pragma: no-cache
+Server: pve-api-daemon/3.0
+
+{"data":null}
+2024/10/11 00:20:56 >>>>>>>>>> REQUEST:
+GET /api2/json/pools HTTP/1.1
+Host: 192.168.2.18:8006
+User-Agent: Go-http-client/1.1
+Accept: application/json
+Authorization: PVEAPIToken=root@pam!terraform=bdeb84a5-2cc6-4b12-a135-e6b81d88366c
+Accept-Encoding: gzip
+
+2024/10/11 00:20:56 <<<<<<<<<< RESULT:
+HTTP/1.1 200 OK
+Content-Length: 11
+Cache-Control: max-age=0
+Connection: Keep-Alive
+Content-Type: application/json;charset=UTF-8
+Date: Fri, 11 Oct 2024 05:21:05 GMT
+Expires: Fri, 11 Oct 2024 05:21:05 GMT
+Pragma: no-cache
+Server: pve-api-daemon/3.0
+
+{"data":[]}
+[90mFri, 11 Oct 2024 00:20:56 -0500[0m [32mINF[0m [1mgithub.com/Telmate/terraform-provider-proxmox/v2/proxmox/util.go:158[0m[36m >[0m [1mEnabling the capture of log-library logs as ithe _capturelog flag was detected[0m
+[90mFri, 11 Oct 2024 00:20:56 -0500[0m [32mINF[0m [1mgithub.com/Telmate/terraform-provider-proxmox/v2/proxmox/util.go:191[0m[36m >[0m [1mLogging Started. Root Logger Set to level debug[0m
+[90mFri, 11 Oct 2024 00:22:10 -0500[0m [32mINF[0m [1mgithub.com/Telmate/terraform-provider-proxmox/v2/proxmox/util.go:158[0m[36m >[0m [1mEnabling the capture of log-library logs as ithe _capturelog flag was detected[0m
+[90mFri, 11 Oct 2024 00:22:10 -0500[0m [32mINF[0m [1mgithub.com/Telmate/terraform-provider-proxmox/v2/proxmox/util.go:191[0m[36m >[0m [1mLogging Started. Root Logger Set to level debug[0m
+2024/10/11 00:22:10 >>>>>>>>>> REQUEST:
+GET /api2/json/cluster/resources?type=vm HTTP/1.1
+Host: 192.168.2.18:8006
+User-Agent: Go-http-client/1.1
+Accept: application/json
+Authorization: PVEAPIToken=root@pam!terraform=bdeb84a5-2cc6-4b12-a135-e6b81d88366c
+Accept-Encoding: gzip
+
+2024/10/11 00:22:10 <<<<<<<<<< RESULT:
+HTTP/1.1 200 OK
+Content-Length: 1066
+Cache-Control: max-age=0
+Connection: Keep-Alive
+Content-Type: application/json;charset=UTF-8
+Date: Fri, 11 Oct 2024 05:22:20 GMT
+Expires: Fri, 11 Oct 2024 05:22:20 GMT
+Pragma: no-cache
+Server: pve-api-daemon/3.0
+
+{"data":[{"id":"qemu/100","name":"DevMachine","template":0,"node":"pve","cpu":0,"maxcpu":4,"maxdisk":214748364800,"netout":0,"status":"stopped","mem":0,"vmid":100,"diskwrite":0,"type":"qemu","uptime":0,"disk":0,"maxmem":8518631424,"diskread":0,"netin":0},{"maxmem":8518631424,"netin":0,"diskread":0,"diskwrite":0,"vmid":101,"disk":0,"type":"qemu","uptime":0,"maxdisk":214748364800,"maxcpu":4,"netout":0,"cpu":0,"mem":0,"status":"stopped","name":"GithubActions","id":"qemu/101","node":"pve","template":0},{"disk":0,"type":"qemu","uptime":0,"diskwrite":0,"vmid":102,"netin":0,"diskread":0,"maxmem":4294967296,"template":0,"node":"pve","name":"JiraOpenSource","id":"qemu/102","mem":0,"status":"stopped","netout":0,"maxcpu":2,"maxdisk":34359738368,"cpu":0},{"name":"lxc-huly-srv","id":"lxc/103","template":0,"node":"pve","netout":638128,"maxdisk":8350298112,"maxcpu":4,"cpu":0.000134459957290355,"status":"running","mem":91287552,"diskwrite":3224682496,"vmid":103,"disk":1750609920,"uptime":15060,"type":"lxc","maxmem":536870912,"netin":15666681,"diskread":5052350464}]}
+2024/10/11 00:22:10 >>>>>>>>>> REQUEST:
+GET /api2/json/nodes/pve/lxc/103/config HTTP/1.1
+Host: 192.168.2.18:8006
+User-Agent: Go-http-client/1.1
+Accept: application/json
+Authorization: PVEAPIToken=root@pam!terraform=bdeb84a5-2cc6-4b12-a135-e6b81d88366c
+Accept-Encoding: gzip
+
+2024/10/11 00:22:10 <<<<<<<<<< RESULT:
+HTTP/1.1 200 OK
+Content-Length: 418
+Cache-Control: max-age=0
+Connection: Keep-Alive
+Content-Type: application/json;charset=UTF-8
+Date: Fri, 11 Oct 2024 05:22:20 GMT
+Expires: Fri, 11 Oct 2024 05:22:20 GMT
+Pragma: no-cache
+Server: pve-api-daemon/3.0
+
+{"data":{"hostname":"lxc-huly-srv","cpulimit":"0","unprivileged":1,"tty":2,"console":1,"swap":0,"onboot":1,"protection":0,"rootfs":"local-lvm:vm-103-disk-0,size=8G","features":"nesting=1","arch":"amd64","digest":"43f7211b790f3f8233840a4093b9749a67b8383a","net0":"name=eth0,bridge=vmbr0,gw=192.168.2.1,hwaddr=EA:8E:DA:62:21:A2,ip=192.168.2.30/24,type=veth","cmode":"tty","ostype":"ubuntu","cpuunits":1024,"memory":512}}
+2024/10/11 00:22:10 >>>>>>>>>> REQUEST:
+GET /api2/json/cluster/ha/resources/103 HTTP/1.1
+Host: 192.168.2.18:8006
+User-Agent: Go-http-client/1.1
+Accept: application/json
+Authorization: PVEAPIToken=root@pam!terraform=bdeb84a5-2cc6-4b12-a135-e6b81d88366c
+Accept-Encoding: gzip
+
+2024/10/11 00:22:10 <<<<<<<<<< RESULT:
+HTTP/1.1 500 no such resource 'ct:103'
+Connection: close
+Content-Length: 13
+Cache-Control: max-age=0
+Content-Type: application/json;charset=UTF-8
+Date: Fri, 11 Oct 2024 05:22:20 GMT
+Expires: Fri, 11 Oct 2024 05:22:20 GMT
+Pragma: no-cache
+Server: pve-api-daemon/3.0
+
+{"data":null}
+2024/10/11 00:22:10 >>>>>>>>>> REQUEST:
+GET /api2/json/pools HTTP/1.1
+Host: 192.168.2.18:8006
+User-Agent: Go-http-client/1.1
+Accept: application/json
+Authorization: PVEAPIToken=root@pam!terraform=bdeb84a5-2cc6-4b12-a135-e6b81d88366c
+Accept-Encoding: gzip
+
+2024/10/11 00:22:10 <<<<<<<<<< RESULT:
+HTTP/1.1 200 OK
+Content-Length: 11
+Cache-Control: max-age=0
+Connection: Keep-Alive
+Content-Type: application/json;charset=UTF-8
+Date: Fri, 11 Oct 2024 05:22:20 GMT
+Expires: Fri, 11 Oct 2024 05:22:20 GMT
+Pragma: no-cache
+Server: pve-api-daemon/3.0
+
+{"data":[]}
+[90mFri, 11 Oct 2024 00:22:10 -0500[0m [32mINF[0m [1mgithub.com/Telmate/terraform-provider-proxmox/v2/proxmox/util.go:158[0m[36m >[0m [1mEnabling the capture of log-library logs as ithe _capturelog flag was detected[0m
+[90mFri, 11 Oct 2024 00:22:10 -0500[0m [32mINF[0m [1mgithub.com/Telmate/terraform-provider-proxmox/v2/proxmox/util.go:191[0m[36m >[0m [1mLogging Started. Root Logger Set to level debug[0m
+[90mFri, 11 Oct 2024 00:23:32 -0500[0m [32mINF[0m [1mgithub.com/Telmate/terraform-provider-proxmox/v2/proxmox/util.go:158[0m[36m >[0m [1mEnabling the capture of log-library logs as ithe _capturelog flag was detected[0m
+[90mFri, 11 Oct 2024 00:23:32 -0500[0m [32mINF[0m [1mgithub.com/Telmate/terraform-provider-proxmox/v2/proxmox/util.go:191[0m[36m >[0m [1mLogging Started. Root Logger Set to level debug[0m
+2024/10/11 00:23:32 >>>>>>>>>> REQUEST:
+GET /api2/json/cluster/resources?type=vm HTTP/1.1
+Host: 192.168.2.18:8006
+User-Agent: Go-http-client/1.1
+Accept: application/json
+Authorization: PVEAPIToken=root@pam!terraform=bdeb84a5-2cc6-4b12-a135-e6b81d88366c
+Accept-Encoding: gzip
+
+2024/10/11 00:23:32 <<<<<<<<<< RESULT:
+HTTP/1.1 200 OK
+Content-Length: 1066
+Cache-Control: max-age=0
+Connection: Keep-Alive
+Content-Type: application/json;charset=UTF-8
+Date: Fri, 11 Oct 2024 05:23:41 GMT
+Expires: Fri, 11 Oct 2024 05:23:41 GMT
+Pragma: no-cache
+Server: pve-api-daemon/3.0
+
+{"data":[{"cpu":0,"maxcpu":4,"maxdisk":214748364800,"netout":0,"status":"stopped","mem":0,"id":"qemu/100","name":"DevMachine","node":"pve","template":0,"maxmem":8518631424,"diskread":0,"netin":0,"vmid":100,"diskwrite":0,"type":"qemu","uptime":0,"disk":0},{"vmid":101,"diskwrite":0,"type":"qemu","uptime":0,"disk":0,"maxmem":8518631424,"diskread":0,"netin":0,"id":"qemu/101","name":"GithubActions","template":0,"node":"pve","cpu":0,"netout":0,"maxdisk":214748364800,"maxcpu":4,"mem":0,"status":"stopped"},{"template":0,"node":"pve","id":"qemu/102","name":"JiraOpenSource","status":"stopped","mem":0,"cpu":0,"maxdisk":34359738368,"maxcpu":2,"netout":0,"type":"qemu","uptime":0,"disk":0,"vmid":102,"diskwrite":0,"diskread":0,"netin":0,"maxmem":4294967296},{"diskread":5940822016,"netin":29554668,"maxmem":536870912,"uptime":15141,"type":"lxc","disk":1783066624,"vmid":103,"diskwrite":4259643392,"status":"running","mem":93319168,"cpu":7.29867268448555e-05,"netout":842328,"maxdisk":8350298112,"maxcpu":4,"node":"pve","template":0,"id":"lxc/103","name":"lxc-huly-srv"}]}
+2024/10/11 00:23:32 >>>>>>>>>> REQUEST:
+GET /api2/json/nodes/pve/lxc/103/config HTTP/1.1
+Host: 192.168.2.18:8006
+User-Agent: Go-http-client/1.1
+Accept: application/json
+Authorization: PVEAPIToken=root@pam!terraform=bdeb84a5-2cc6-4b12-a135-e6b81d88366c
+Accept-Encoding: gzip
+
+2024/10/11 00:23:32 <<<<<<<<<< RESULT:
+HTTP/1.1 200 OK
+Content-Length: 418
+Cache-Control: max-age=0
+Connection: Keep-Alive
+Content-Type: application/json;charset=UTF-8
+Date: Fri, 11 Oct 2024 05:23:41 GMT
+Expires: Fri, 11 Oct 2024 05:23:41 GMT
+Pragma: no-cache
+Server: pve-api-daemon/3.0
+
+{"data":{"cpuunits":1024,"cmode":"tty","net0":"name=eth0,bridge=vmbr0,gw=192.168.2.1,hwaddr=EA:8E:DA:62:21:A2,ip=192.168.2.30/24,type=veth","ostype":"ubuntu","memory":512,"protection":0,"arch":"amd64","digest":"43f7211b790f3f8233840a4093b9749a67b8383a","features":"nesting=1","rootfs":"local-lvm:vm-103-disk-0,size=8G","console":1,"onboot":1,"swap":0,"hostname":"lxc-huly-srv","tty":2,"unprivileged":1,"cpulimit":"0"}}
+2024/10/11 00:23:32 >>>>>>>>>> REQUEST:
+GET /api2/json/cluster/ha/resources/103 HTTP/1.1
+Host: 192.168.2.18:8006
+User-Agent: Go-http-client/1.1
+Accept: application/json
+Authorization: PVEAPIToken=root@pam!terraform=bdeb84a5-2cc6-4b12-a135-e6b81d88366c
+Accept-Encoding: gzip
+
+2024/10/11 00:23:32 <<<<<<<<<< RESULT:
+HTTP/1.1 500 no such resource 'ct:103'
+Connection: close
+Content-Length: 13
+Cache-Control: max-age=0
+Content-Type: application/json;charset=UTF-8
+Date: Fri, 11 Oct 2024 05:23:41 GMT
+Expires: Fri, 11 Oct 2024 05:23:41 GMT
+Pragma: no-cache
+Server: pve-api-daemon/3.0
+
+{"data":null}
+2024/10/11 00:23:32 >>>>>>>>>> REQUEST:
+GET /api2/json/pools HTTP/1.1
+Host: 192.168.2.18:8006
+User-Agent: Go-http-client/1.1
+Accept: application/json
+Authorization: PVEAPIToken=root@pam!terraform=bdeb84a5-2cc6-4b12-a135-e6b81d88366c
+Accept-Encoding: gzip
+
+2024/10/11 00:23:32 <<<<<<<<<< RESULT:
+HTTP/1.1 200 OK
+Content-Length: 11
+Cache-Control: max-age=0
+Connection: Keep-Alive
+Content-Type: application/json;charset=UTF-8
+Date: Fri, 11 Oct 2024 05:23:41 GMT
+Expires: Fri, 11 Oct 2024 05:23:41 GMT
+Pragma: no-cache
+Server: pve-api-daemon/3.0
+
+{"data":[]}
+[90mFri, 11 Oct 2024 00:23:32 -0500[0m [32mINF[0m [1mgithub.com/Telmate/terraform-provider-proxmox/v2/proxmox/util.go:158[0m[36m >[0m [1mEnabling the capture of log-library logs as ithe _capturelog flag was detected[0m
+[90mFri, 11 Oct 2024 00:23:32 -0500[0m [32mINF[0m [1mgithub.com/Telmate/terraform-provider-proxmox/v2/proxmox/util.go:191[0m[36m >[0m [1mLogging Started. Root Logger Set to level debug[0m
+[90mFri, 11 Oct 2024 00:24:35 -0500[0m [32mINF[0m [1mgithub.com/Telmate/terraform-provider-proxmox/v2/proxmox/util.go:158[0m[36m >[0m [1mEnabling the capture of log-library logs as ithe _capturelog flag was detected[0m
+[90mFri, 11 Oct 2024 00:24:35 -0500[0m [32mINF[0m [1mgithub.com/Telmate/terraform-provider-proxmox/v2/proxmox/util.go:191[0m[36m >[0m [1mLogging Started. Root Logger Set to level debug[0m
+2024/10/11 00:24:35 >>>>>>>>>> REQUEST:
+GET /api2/json/cluster/resources?type=vm HTTP/1.1
+Host: 192.168.2.18:8006
+User-Agent: Go-http-client/1.1
+Accept: application/json
+Authorization: PVEAPIToken=root@pam!terraform=bdeb84a5-2cc6-4b12-a135-e6b81d88366c
+Accept-Encoding: gzip
+
+2024/10/11 00:24:35 <<<<<<<<<< RESULT:
+HTTP/1.1 200 OK
+Content-Length: 1067
+Cache-Control: max-age=0
+Connection: Keep-Alive
+Content-Type: application/json;charset=UTF-8
+Date: Fri, 11 Oct 2024 05:24:45 GMT
+Expires: Fri, 11 Oct 2024 05:24:45 GMT
+Pragma: no-cache
+Server: pve-api-daemon/3.0
+
+{"data":[{"node":"pve","template":0,"id":"qemu/100","name":"DevMachine","status":"stopped","mem":0,"cpu":0,"maxcpu":4,"maxdisk":214748364800,"netout":0,"uptime":0,"type":"qemu","disk":0,"vmid":100,"diskwrite":0,"diskread":0,"netin":0,"maxmem":8518631424},{"cpu":0,"netout":0,"maxdisk":214748364800,"maxcpu":4,"status":"stopped","mem":0,"id":"qemu/101","name":"GithubActions","node":"pve","template":0,"maxmem":8518631424,"diskread":0,"netin":0,"vmid":101,"diskwrite":0,"uptime":0,"type":"qemu","disk":0},{"maxcpu":2,"maxdisk":34359738368,"netout":0,"cpu":0,"status":"stopped","mem":0,"name":"JiraOpenSource","id":"qemu/102","node":"pve","template":0,"maxmem":4294967296,"netin":0,"diskread":0,"diskwrite":0,"vmid":102,"disk":0,"uptime":0,"type":"qemu"},{"mem":96309248,"status":"running","cpu":0.000268221272243358,"maxcpu":4,"maxdisk":8350298112,"netout":1116423,"node":"pve","template":0,"id":"lxc/103","name":"lxc-huly-srv","diskread":7327006720,"netin":43427008,"maxmem":536870912,"type":"lxc","uptime":15200,"disk":1782546432,"vmid":103,"diskwrite":5293539328}]}
+2024/10/11 00:24:35 >>>>>>>>>> REQUEST:
+GET /api2/json/nodes/pve/lxc/103/config HTTP/1.1
+Host: 192.168.2.18:8006
+User-Agent: Go-http-client/1.1
+Accept: application/json
+Authorization: PVEAPIToken=root@pam!terraform=bdeb84a5-2cc6-4b12-a135-e6b81d88366c
+Accept-Encoding: gzip
+
+2024/10/11 00:24:35 <<<<<<<<<< RESULT:
+HTTP/1.1 200 OK
+Content-Length: 418
+Cache-Control: max-age=0
+Connection: Keep-Alive
+Content-Type: application/json;charset=UTF-8
+Date: Fri, 11 Oct 2024 05:24:45 GMT
+Expires: Fri, 11 Oct 2024 05:24:45 GMT
+Pragma: no-cache
+Server: pve-api-daemon/3.0
+
+{"data":{"hostname":"lxc-huly-srv","cpulimit":"0","unprivileged":1,"tty":2,"console":1,"onboot":1,"swap":0,"protection":0,"features":"nesting=1","digest":"43f7211b790f3f8233840a4093b9749a67b8383a","arch":"amd64","rootfs":"local-lvm:vm-103-disk-0,size=8G","cmode":"tty","net0":"name=eth0,bridge=vmbr0,gw=192.168.2.1,hwaddr=EA:8E:DA:62:21:A2,ip=192.168.2.30/24,type=veth","ostype":"ubuntu","cpuunits":1024,"memory":512}}
+2024/10/11 00:24:35 >>>>>>>>>> REQUEST:
+GET /api2/json/cluster/ha/resources/103 HTTP/1.1
+Host: 192.168.2.18:8006
+User-Agent: Go-http-client/1.1
+Accept: application/json
+Authorization: PVEAPIToken=root@pam!terraform=bdeb84a5-2cc6-4b12-a135-e6b81d88366c
+Accept-Encoding: gzip
+
+2024/10/11 00:24:35 <<<<<<<<<< RESULT:
+HTTP/1.1 500 no such resource 'ct:103'
+Connection: close
+Content-Length: 13
+Cache-Control: max-age=0
+Content-Type: application/json;charset=UTF-8
+Date: Fri, 11 Oct 2024 05:24:45 GMT
+Expires: Fri, 11 Oct 2024 05:24:45 GMT
+Pragma: no-cache
+Server: pve-api-daemon/3.0
+
+{"data":null}
+2024/10/11 00:24:35 >>>>>>>>>> REQUEST:
+GET /api2/json/pools HTTP/1.1
+Host: 192.168.2.18:8006
+User-Agent: Go-http-client/1.1
+Accept: application/json
+Authorization: PVEAPIToken=root@pam!terraform=bdeb84a5-2cc6-4b12-a135-e6b81d88366c
+Accept-Encoding: gzip
+
+2024/10/11 00:24:35 <<<<<<<<<< RESULT:
+HTTP/1.1 200 OK
+Content-Length: 11
+Cache-Control: max-age=0
+Connection: Keep-Alive
+Content-Type: application/json;charset=UTF-8
+Date: Fri, 11 Oct 2024 05:24:45 GMT
+Expires: Fri, 11 Oct 2024 05:24:45 GMT
+Pragma: no-cache
+Server: pve-api-daemon/3.0
+
+{"data":[]}
+[90mFri, 11 Oct 2024 00:24:35 -0500[0m [32mINF[0m [1mgithub.com/Telmate/terraform-provider-proxmox/v2/proxmox/util.go:158[0m[36m >[0m [1mEnabling the capture of log-library logs as ithe _capturelog flag was detected[0m
+[90mFri, 11 Oct 2024 00:24:35 -0500[0m [32mINF[0m [1mgithub.com/Telmate/terraform-provider-proxmox/v2/proxmox/util.go:191[0m[36m >[0m [1mLogging Started. Root Logger Set to level debug[0m
+[90mFri, 11 Oct 2024 00:26:04 -0500[0m [32mINF[0m [1mgithub.com/Telmate/terraform-provider-proxmox/v2/proxmox/util.go:158[0m[36m >[0m [1mEnabling the capture of log-library logs as ithe _capturelog flag was detected[0m
+[90mFri, 11 Oct 2024 00:26:04 -0500[0m [32mINF[0m [1mgithub.com/Telmate/terraform-provider-proxmox/v2/proxmox/util.go:191[0m[36m >[0m [1mLogging Started. Root Logger Set to level debug[0m
+2024/10/11 00:26:04 >>>>>>>>>> REQUEST:
+GET /api2/json/cluster/resources?type=vm HTTP/1.1
+Host: 192.168.2.18:8006
+User-Agent: Go-http-client/1.1
+Accept: application/json
+Authorization: PVEAPIToken=root@pam!terraform=bdeb84a5-2cc6-4b12-a135-e6b81d88366c
+Accept-Encoding: gzip
+
+2024/10/11 00:26:04 <<<<<<<<<< RESULT:
+HTTP/1.1 200 OK
+Content-Length: 1067
+Cache-Control: max-age=0
+Connection: Keep-Alive
+Content-Type: application/json;charset=UTF-8
+Date: Fri, 11 Oct 2024 05:26:13 GMT
+Expires: Fri, 11 Oct 2024 05:26:13 GMT
+Pragma: no-cache
+Server: pve-api-daemon/3.0
+
+{"data":[{"vmid":100,"diskwrite":0,"uptime":0,"type":"qemu","disk":0,"maxmem":8518631424,"diskread":0,"netin":0,"id":"qemu/100","name":"DevMachine","node":"pve","template":0,"cpu":0,"netout":0,"maxcpu":4,"maxdisk":214748364800,"status":"stopped","mem":0},{"diskwrite":0,"vmid":101,"disk":0,"uptime":0,"type":"qemu","maxmem":8518631424,"netin":0,"diskread":0,"name":"GithubActions","id":"qemu/101","template":0,"node":"pve","netout":0,"maxdisk":214748364800,"maxcpu":4,"cpu":0,"mem":0,"status":"stopped"},{"node":"pve","template":0,"id":"qemu/102","name":"JiraOpenSource","mem":0,"status":"stopped","cpu":0,"netout":0,"maxdisk":34359738368,"maxcpu":2,"type":"qemu","uptime":0,"disk":0,"vmid":102,"diskwrite":0,"diskread":0,"netin":0,"maxmem":4294967296},{"node":"pve","template":0,"name":"lxc-huly-srv","id":"lxc/103","status":"running","mem":98078720,"netout":1294468,"maxcpu":4,"maxdisk":8350298112,"cpu":2.68497200905107e-05,"disk":1782571008,"type":"lxc","uptime":15290,"diskwrite":6329794560,"vmid":103,"netin":57201895,"diskread":8535293952,"maxmem":536870912}]}
+2024/10/11 00:26:04 >>>>>>>>>> REQUEST:
+GET /api2/json/nodes/pve/lxc/103/config HTTP/1.1
+Host: 192.168.2.18:8006
+User-Agent: Go-http-client/1.1
+Accept: application/json
+Authorization: PVEAPIToken=root@pam!terraform=bdeb84a5-2cc6-4b12-a135-e6b81d88366c
+Accept-Encoding: gzip
+
+2024/10/11 00:26:04 <<<<<<<<<< RESULT:
+HTTP/1.1 200 OK
+Content-Length: 418
+Cache-Control: max-age=0
+Connection: Keep-Alive
+Content-Type: application/json;charset=UTF-8
+Date: Fri, 11 Oct 2024 05:26:13 GMT
+Expires: Fri, 11 Oct 2024 05:26:13 GMT
+Pragma: no-cache
+Server: pve-api-daemon/3.0
+
+{"data":{"console":1,"swap":0,"onboot":1,"hostname":"lxc-huly-srv","cpulimit":"0","tty":2,"unprivileged":1,"cmode":"tty","net0":"name=eth0,bridge=vmbr0,gw=192.168.2.1,hwaddr=EA:8E:DA:62:21:A2,ip=192.168.2.30/24,type=veth","ostype":"ubuntu","cpuunits":1024,"memory":512,"protection":0,"features":"nesting=1","arch":"amd64","digest":"43f7211b790f3f8233840a4093b9749a67b8383a","rootfs":"local-lvm:vm-103-disk-0,size=8G"}}
+2024/10/11 00:26:04 >>>>>>>>>> REQUEST:
+GET /api2/json/cluster/ha/resources/103 HTTP/1.1
+Host: 192.168.2.18:8006
+User-Agent: Go-http-client/1.1
+Accept: application/json
+Authorization: PVEAPIToken=root@pam!terraform=bdeb84a5-2cc6-4b12-a135-e6b81d88366c
+Accept-Encoding: gzip
+
+2024/10/11 00:26:04 <<<<<<<<<< RESULT:
+HTTP/1.1 500 no such resource 'ct:103'
+Connection: close
+Content-Length: 13
+Cache-Control: max-age=0
+Content-Type: application/json;charset=UTF-8
+Date: Fri, 11 Oct 2024 05:26:13 GMT
+Expires: Fri, 11 Oct 2024 05:26:13 GMT
+Pragma: no-cache
+Server: pve-api-daemon/3.0
+
+{"data":null}
+2024/10/11 00:26:04 >>>>>>>>>> REQUEST:
+GET /api2/json/pools HTTP/1.1
+Host: 192.168.2.18:8006
+User-Agent: Go-http-client/1.1
+Accept: application/json
+Authorization: PVEAPIToken=root@pam!terraform=bdeb84a5-2cc6-4b12-a135-e6b81d88366c
+Accept-Encoding: gzip
+
+2024/10/11 00:26:04 <<<<<<<<<< RESULT:
+HTTP/1.1 200 OK
+Content-Length: 11
+Cache-Control: max-age=0
+Connection: Keep-Alive
+Content-Type: application/json;charset=UTF-8
+Date: Fri, 11 Oct 2024 05:26:13 GMT
+Expires: Fri, 11 Oct 2024 05:26:13 GMT
+Pragma: no-cache
+Server: pve-api-daemon/3.0
+
+{"data":[]}
+[90mFri, 11 Oct 2024 00:26:04 -0500[0m [32mINF[0m [1mgithub.com/Telmate/terraform-provider-proxmox/v2/proxmox/util.go:158[0m[36m >[0m [1mEnabling the capture of log-library logs as ithe _capturelog flag was detected[0m
+[90mFri, 11 Oct 2024 00:26:04 -0500[0m [32mINF[0m [1mgithub.com/Telmate/terraform-provider-proxmox/v2/proxmox/util.go:191[0m[36m >[0m [1mLogging Started. Root Logger Set to level debug[0m
+[90mFri, 11 Oct 2024 00:27:16 -0500[0m [32mINF[0m [1mgithub.com/Telmate/terraform-provider-proxmox/v2/proxmox/util.go:158[0m[36m >[0m [1mEnabling the capture of log-library logs as ithe _capturelog flag was detected[0m
+[90mFri, 11 Oct 2024 00:27:16 -0500[0m [32mINF[0m [1mgithub.com/Telmate/terraform-provider-proxmox/v2/proxmox/util.go:191[0m[36m >[0m [1mLogging Started. Root Logger Set to level debug[0m
+2024/10/11 00:27:16 >>>>>>>>>> REQUEST:
+GET /api2/json/cluster/resources?type=vm HTTP/1.1
+Host: 192.168.2.18:8006
+User-Agent: Go-http-client/1.1
+Accept: application/json
+Authorization: PVEAPIToken=root@pam!terraform=bdeb84a5-2cc6-4b12-a135-e6b81d88366c
+Accept-Encoding: gzip
+
+2024/10/11 00:27:16 <<<<<<<<<< RESULT:
+HTTP/1.1 200 OK
+Content-Length: 1067
+Cache-Control: max-age=0
+Connection: Keep-Alive
+Content-Type: application/json;charset=UTF-8
+Date: Fri, 11 Oct 2024 05:27:26 GMT
+Expires: Fri, 11 Oct 2024 05:27:26 GMT
+Pragma: no-cache
+Server: pve-api-daemon/3.0
+
+{"data":[{"disk":0,"type":"qemu","uptime":0,"diskwrite":0,"vmid":100,"netin":0,"diskread":0,"maxmem":8518631424,"template":0,"node":"pve","name":"DevMachine","id":"qemu/100","mem":0,"status":"stopped","netout":0,"maxdisk":214748364800,"maxcpu":4,"cpu":0},{"template":0,"node":"pve","name":"GithubActions","id":"qemu/101","mem":0,"status":"stopped","netout":0,"maxdisk":214748364800,"maxcpu":4,"cpu":0,"disk":0,"type":"qemu","uptime":0,"diskwrite":0,"vmid":101,"netin":0,"diskread":0,"maxmem":8518631424},{"uptime":0,"type":"qemu","disk":0,"vmid":102,"diskwrite":0,"diskread":0,"netin":0,"maxmem":4294967296,"template":0,"node":"pve","id":"qemu/102","name":"JiraOpenSource","status":"stopped","mem":0,"cpu":0,"netout":0,"maxcpu":2,"maxdisk":34359738368},{"status":"running","mem":99463168,"cpu":0.000134814566971511,"netout":1535194,"maxcpu":4,"maxdisk":8350298112,"template":0,"node":"pve","id":"lxc/103","name":"lxc-huly-srv","diskread":9567879168,"netin":70963460,"maxmem":536870912,"type":"lxc","uptime":15360,"disk":1782595584,"vmid":103,"diskwrite":7366393856}]}
+2024/10/11 00:27:16 >>>>>>>>>> REQUEST:
+GET /api2/json/nodes/pve/lxc/103/config HTTP/1.1
+Host: 192.168.2.18:8006
+User-Agent: Go-http-client/1.1
+Accept: application/json
+Authorization: PVEAPIToken=root@pam!terraform=bdeb84a5-2cc6-4b12-a135-e6b81d88366c
+Accept-Encoding: gzip
+
+2024/10/11 00:27:16 <<<<<<<<<< RESULT:
+HTTP/1.1 200 OK
+Content-Length: 418
+Cache-Control: max-age=0
+Connection: Keep-Alive
+Content-Type: application/json;charset=UTF-8
+Date: Fri, 11 Oct 2024 05:27:26 GMT
+Expires: Fri, 11 Oct 2024 05:27:26 GMT
+Pragma: no-cache
+Server: pve-api-daemon/3.0
+
+{"data":{"tty":2,"unprivileged":1,"cpulimit":"0","hostname":"lxc-huly-srv","onboot":1,"swap":0,"console":1,"rootfs":"local-lvm:vm-103-disk-0,size=8G","arch":"amd64","digest":"43f7211b790f3f8233840a4093b9749a67b8383a","features":"nesting=1","protection":0,"memory":512,"cpuunits":1024,"ostype":"ubuntu","net0":"name=eth0,bridge=vmbr0,gw=192.168.2.1,hwaddr=EA:8E:DA:62:21:A2,ip=192.168.2.30/24,type=veth","cmode":"tty"}}
+2024/10/11 00:27:16 >>>>>>>>>> REQUEST:
+GET /api2/json/cluster/ha/resources/103 HTTP/1.1
+Host: 192.168.2.18:8006
+User-Agent: Go-http-client/1.1
+Accept: application/json
+Authorization: PVEAPIToken=root@pam!terraform=bdeb84a5-2cc6-4b12-a135-e6b81d88366c
+Accept-Encoding: gzip
+
+2024/10/11 00:27:16 <<<<<<<<<< RESULT:
+HTTP/1.1 500 no such resource 'ct:103'
+Connection: close
+Content-Length: 13
+Cache-Control: max-age=0
+Content-Type: application/json;charset=UTF-8
+Date: Fri, 11 Oct 2024 05:27:26 GMT
+Expires: Fri, 11 Oct 2024 05:27:26 GMT
+Pragma: no-cache
+Server: pve-api-daemon/3.0
+
+{"data":null}
+2024/10/11 00:27:16 >>>>>>>>>> REQUEST:
+GET /api2/json/pools HTTP/1.1
+Host: 192.168.2.18:8006
+User-Agent: Go-http-client/1.1
+Accept: application/json
+Authorization: PVEAPIToken=root@pam!terraform=bdeb84a5-2cc6-4b12-a135-e6b81d88366c
+Accept-Encoding: gzip
+
+2024/10/11 00:27:16 <<<<<<<<<< RESULT:
+HTTP/1.1 200 OK
+Content-Length: 11
+Cache-Control: max-age=0
+Connection: Keep-Alive
+Content-Type: application/json;charset=UTF-8
+Date: Fri, 11 Oct 2024 05:27:26 GMT
+Expires: Fri, 11 Oct 2024 05:27:26 GMT
+Pragma: no-cache
+Server: pve-api-daemon/3.0
+
+{"data":[]}
+[90mFri, 11 Oct 2024 00:27:16 -0500[0m [32mINF[0m [1mgithub.com/Telmate/terraform-provider-proxmox/v2/proxmox/util.go:158[0m[36m >[0m [1mEnabling the capture of log-library logs as ithe _capturelog flag was detected[0m
+[90mFri, 11 Oct 2024 00:27:16 -0500[0m [32mINF[0m [1mgithub.com/Telmate/terraform-provider-proxmox/v2/proxmox/util.go:191[0m[36m >[0m [1mLogging Started. Root Logger Set to level debug[0m
+[90mFri, 11 Oct 2024 00:36:42 -0500[0m [32mINF[0m [1mgithub.com/Telmate/terraform-provider-proxmox/v2/proxmox/util.go:158[0m[36m >[0m [1mEnabling the capture of log-library logs as ithe _capturelog flag was detected[0m
+[90mFri, 11 Oct 2024 00:36:42 -0500[0m [32mINF[0m [1mgithub.com/Telmate/terraform-provider-proxmox/v2/proxmox/util.go:191[0m[36m >[0m [1mLogging Started. Root Logger Set to level debug[0m
+2024/10/11 00:36:42 >>>>>>>>>> REQUEST:
+GET /api2/json/cluster/resources?type=vm HTTP/1.1
+Host: 192.168.2.18:8006
+User-Agent: Go-http-client/1.1
+Accept: application/json
+Authorization: PVEAPIToken=root@pam!terraform=bdeb84a5-2cc6-4b12-a135-e6b81d88366c
+Accept-Encoding: gzip
+
+2024/10/11 00:36:42 <<<<<<<<<< RESULT:
+HTTP/1.1 200 OK
+Content-Length: 754
+Cache-Control: max-age=0
+Connection: Keep-Alive
+Content-Type: application/json;charset=UTF-8
+Date: Fri, 11 Oct 2024 05:36:52 GMT
+Expires: Fri, 11 Oct 2024 05:36:52 GMT
+Pragma: no-cache
+Server: pve-api-daemon/3.0
+
+{"data":[{"template":0,"node":"pve","name":"DevMachine","id":"qemu/100","mem":0,"status":"stopped","netout":0,"maxcpu":4,"maxdisk":214748364800,"cpu":0,"disk":0,"type":"qemu","uptime":0,"diskwrite":0,"vmid":100,"netin":0,"diskread":0,"maxmem":8518631424},{"id":"qemu/101","name":"GithubActions","node":"pve","template":0,"cpu":0,"maxcpu":4,"maxdisk":214748364800,"netout":0,"status":"stopped","mem":0,"vmid":101,"diskwrite":0,"uptime":0,"type":"qemu","disk":0,"maxmem":8518631424,"diskread":0,"netin":0},{"cpu":0,"netout":0,"maxdisk":34359738368,"maxcpu":2,"mem":0,"status":"stopped","id":"qemu/102","name":"JiraOpenSource","node":"pve","template":0,"maxmem":4294967296,"diskread":0,"netin":0,"vmid":102,"diskwrite":0,"uptime":0,"type":"qemu","disk":0}]}
+[90mFri, 11 Oct 2024 00:36:53 -0500[0m [32mINF[0m [1mgithub.com/Telmate/terraform-provider-proxmox/v2/proxmox/util.go:158[0m[36m >[0m [1mEnabling the capture of log-library logs as ithe _capturelog flag was detected[0m
+[90mFri, 11 Oct 2024 00:36:53 -0500[0m [32mINF[0m [1mgithub.com/Telmate/terraform-provider-proxmox/v2/proxmox/util.go:191[0m[36m >[0m [1mLogging Started. Root Logger Set to level debug[0m
+[90mFri, 11 Oct 2024 00:36:53 -0500[0m [32mINF[0m [1mgithub.com/Telmate/terraform-provider-proxmox/v2/proxmox/util.go:158[0m[36m >[0m [1mEnabling the capture of log-library logs as ithe _capturelog flag was detected[0m
+[90mFri, 11 Oct 2024 00:36:53 -0500[0m [32mINF[0m [1mgithub.com/Telmate/terraform-provider-proxmox/v2/proxmox/util.go:191[0m[36m >[0m [1mLogging Started. Root Logger Set to level debug[0m
+2024/10/11 00:36:55 [DEBUG] setting computed for "unused" from ComputedKeys
+2024/10/11 00:36:55 >>>>>>>>>> REQUEST:
+GET /api2/json/cluster/nextid HTTP/1.1
+Host: 192.168.2.18:8006
+User-Agent: Go-http-client/1.1
+Accept: application/json
+Authorization: PVEAPIToken=root@pam!terraform=bdeb84a5-2cc6-4b12-a135-e6b81d88366c
+Accept-Encoding: gzip
+
+2024/10/11 00:36:55 <<<<<<<<<< RESULT:
+HTTP/1.1 200 OK
+Content-Length: 14
+Cache-Control: max-age=0
+Connection: Keep-Alive
+Content-Type: application/json;charset=UTF-8
+Date: Fri, 11 Oct 2024 05:37:05 GMT
+Expires: Fri, 11 Oct 2024 05:37:05 GMT
+Pragma: no-cache
+Server: pve-api-daemon/3.0
+
+{"data":"103"}
+2024/10/11 00:36:55 >>>>>>>>>> REQUEST:
+POST /api2/json/nodes/pve/lxc HTTP/1.1
+Host: 192.168.2.18:8006
+User-Agent: Go-http-client/1.1
+Content-Length: 1163
+Accept: application/json
+Authorization: PVEAPIToken=root@pam!terraform=bdeb84a5-2cc6-4b12-a135-e6b81d88366c
+Content-Type: application/x-www-form-urlencoded
+Accept-Encoding: gzip
+
+arch=amd64&cmode=tty&console=1&cpulimit=0&cpuunits=1024&features=nesting%3D1&hostname=lxc-huly-srv&memory=2048&net0=bridge%3Dvmbr0%2Cname%3Deth0%2Cip%3D192.168.2.30%2F24%2Cgw%3D192.168.2.1&onboot=1&ostemplate=local%3Avztmpl%2Fubuntu-20.04-standard_20.04-1_amd64.tar.gz&password=52878911&protection=0&rootfs=local-lvm%3A8&ssh-public-keys=ssh-rsa+AAAAB3NzaC1yc2EAAAADAQABAAACAQCgjqfM6J3pJ0YgGGu4UtnLvckKNoX70COr5k6BXikFeHodUIBvya1iJ07bge2Fr67wZqZIO72IHAJuilFQaY%2B4ojcJTjdTWn7d0bf%2F3lh%2FDTFbyAMJuUl6BMVCBhMih7oyXTzGd0N9vfYigxOfpAP37YqCpUJD0NgO6d%2FsqP4tFaJHUE2r2ugIHo5mDdtSJzsNYjIa4mTOOjF15x%2BcBSmO3StuhiZ8HOneVvdTaHFUlUpv6joTqFUJzbKWhCD%2BSlpdBSbNn44%2F1WErS3iR9iFPsDLaKVpz2Q1PP3DQwZ40p9oT0SXk53gTkXU4rvzd6axs5sjiqYyDfa7rVGpGkEGCfA980MOvN%2Fwy32MDIhgROmwzYedyZSE%2BiKkDNGZkEcL9s7fJMbBA9HdLYtebRL0kQMc3nFffFRQDfgDDnVOvTOHEUj6LyAyOrKIgvikpRsKxm51ZlMHRZZx%2BNQFlWjCtPNaphQreWXjeFLtimAUJvfi42qUFddn1UU%2FoabJVZtNACOTnKgaQtWu%2FgYbeS%2BT1vCdKuTzDKdZc1fLsucUCANsLJIKzvhm8K8B7ZkGcxTphNLYTfrzkJG6ZDjYR%2BRo8QH0vn%2F2M10byL%2BtJ09iqSHlvuQ4zc8nUPi6Uhl1XBDzkmt1LodApDcSjJF%2BjzudVLK%2FmDkfoVsU2gWNysF7x6Q%3D%3D%0A&start=1&storage=local&swap=0&tty=2&unprivileged=1&vmid=103
+2024/10/11 00:36:55 <<<<<<<<<< RESULT:
+HTTP/1.1 200 OK
+Connection: close
+Content-Length: 79
+Cache-Control: max-age=0
+Content-Type: application/json;charset=UTF-8
+Date: Fri, 11 Oct 2024 05:37:05 GMT
+Expires: Fri, 11 Oct 2024 05:37:05 GMT
+Pragma: no-cache
+Server: pve-api-daemon/3.0
+
+{"data":"UPID:pve:0002C477:002EBEB5:6708B981:vzcreate:103:root@pam!terraform:"}
+2024/10/11 00:36:55 >>>>>>>>>> REQUEST:
+GET /api2/json/nodes/pve/tasks/UPID:pve:0002C477:002EBEB5:6708B981:vzcreate:103:root@pam!terraform:/status HTTP/1.1
+Host: 192.168.2.18:8006
+User-Agent: Go-http-client/1.1
+Accept: application/json
+Authorization: PVEAPIToken=root@pam!terraform=bdeb84a5-2cc6-4b12-a135-e6b81d88366c
+Accept-Encoding: gzip
+
+2024/10/11 00:36:55 <<<<<<<<<< RESULT:
+HTTP/1.1 200 OK
+Content-Length: 242
+Cache-Control: max-age=0
+Connection: Keep-Alive
+Connection: Keep-Alive
+Content-Type: application/json;charset=UTF-8
+Date: Fri, 11 Oct 2024 05:37:05 GMT
+Expires: Fri, 11 Oct 2024 05:37:05 GMT
+Pragma: no-cache
+Server: pve-api-daemon/3.0
+
+{"data":{"status":"running","pstart":3063477,"upid":"UPID:pve:0002C477:002EBEB5:6708B981:vzcreate:103:root@pam!terraform:","starttime":1728625025,"tokenid":"terraform","type":"vzcreate","id":"103","pid":181367,"user":"root@pam","node":"pve"}}
+2024/10/11 00:36:57 >>>>>>>>>> REQUEST:
+GET /api2/json/nodes/pve/tasks/UPID:pve:0002C477:002EBEB5:6708B981:vzcreate:103:root@pam!terraform:/status HTTP/1.1
+Host: 192.168.2.18:8006
+User-Agent: Go-http-client/1.1
+Accept: application/json
+Authorization: PVEAPIToken=root@pam!terraform=bdeb84a5-2cc6-4b12-a135-e6b81d88366c
+Accept-Encoding: gzip
+
+2024/10/11 00:36:57 <<<<<<<<<< RESULT:
+HTTP/1.1 200 OK
+Content-Length: 242
+Cache-Control: max-age=0
+Connection: Keep-Alive
+Connection: Keep-Alive
+Content-Type: application/json;charset=UTF-8
+Date: Fri, 11 Oct 2024 05:37:07 GMT
+Expires: Fri, 11 Oct 2024 05:37:07 GMT
+Pragma: no-cache
+Server: pve-api-daemon/3.0
+
+{"data":{"starttime":1728625025,"tokenid":"terraform","type":"vzcreate","user":"root@pam","node":"pve","id":"103","pid":181367,"pstart":3063477,"status":"running","upid":"UPID:pve:0002C477:002EBEB5:6708B981:vzcreate:103:root@pam!terraform:"}}
+2024/10/11 00:36:59 >>>>>>>>>> REQUEST:
+GET /api2/json/nodes/pve/tasks/UPID:pve:0002C477:002EBEB5:6708B981:vzcreate:103:root@pam!terraform:/status HTTP/1.1
+Host: 192.168.2.18:8006
+User-Agent: Go-http-client/1.1
+Accept: application/json
+Authorization: PVEAPIToken=root@pam!terraform=bdeb84a5-2cc6-4b12-a135-e6b81d88366c
+Accept-Encoding: gzip
+
+2024/10/11 00:36:59 <<<<<<<<<< RESULT:
+HTTP/1.1 200 OK
+Content-Length: 242
+Cache-Control: max-age=0
+Connection: Keep-Alive
+Connection: Keep-Alive
+Content-Type: application/json;charset=UTF-8
+Date: Fri, 11 Oct 2024 05:37:09 GMT
+Expires: Fri, 11 Oct 2024 05:37:09 GMT
+Pragma: no-cache
+Server: pve-api-daemon/3.0
+
+{"data":{"type":"vzcreate","tokenid":"terraform","starttime":1728625025,"node":"pve","user":"root@pam","pid":181367,"id":"103","pstart":3063477,"status":"running","upid":"UPID:pve:0002C477:002EBEB5:6708B981:vzcreate:103:root@pam!terraform:"}}
+2024/10/11 00:37:01 >>>>>>>>>> REQUEST:
+GET /api2/json/nodes/pve/tasks/UPID:pve:0002C477:002EBEB5:6708B981:vzcreate:103:root@pam!terraform:/status HTTP/1.1
+Host: 192.168.2.18:8006
+User-Agent: Go-http-client/1.1
+Accept: application/json
+Authorization: PVEAPIToken=root@pam!terraform=bdeb84a5-2cc6-4b12-a135-e6b81d88366c
+Accept-Encoding: gzip
+
+2024/10/11 00:37:01 <<<<<<<<<< RESULT:
+HTTP/1.1 200 OK
+Content-Length: 242
+Cache-Control: max-age=0
+Connection: Keep-Alive
+Connection: Keep-Alive
+Content-Type: application/json;charset=UTF-8
+Date: Fri, 11 Oct 2024 05:37:11 GMT
+Expires: Fri, 11 Oct 2024 05:37:11 GMT
+Pragma: no-cache
+Server: pve-api-daemon/3.0
+
+{"data":{"type":"vzcreate","tokenid":"terraform","starttime":1728625025,"node":"pve","user":"root@pam","pid":181367,"id":"103","pstart":3063477,"status":"running","upid":"UPID:pve:0002C477:002EBEB5:6708B981:vzcreate:103:root@pam!terraform:"}}
+2024/10/11 00:37:03 >>>>>>>>>> REQUEST:
+GET /api2/json/nodes/pve/tasks/UPID:pve:0002C477:002EBEB5:6708B981:vzcreate:103:root@pam!terraform:/status HTTP/1.1
+Host: 192.168.2.18:8006
+User-Agent: Go-http-client/1.1
+Accept: application/json
+Authorization: PVEAPIToken=root@pam!terraform=bdeb84a5-2cc6-4b12-a135-e6b81d88366c
+Accept-Encoding: gzip
+
+2024/10/11 00:37:03 <<<<<<<<<< RESULT:
+HTTP/1.1 200 OK
+Content-Length: 242
+Cache-Control: max-age=0
+Connection: Keep-Alive
+Connection: Keep-Alive
+Content-Type: application/json;charset=UTF-8
+Date: Fri, 11 Oct 2024 05:37:13 GMT
+Expires: Fri, 11 Oct 2024 05:37:13 GMT
+Pragma: no-cache
+Server: pve-api-daemon/3.0
+
+{"data":{"pid":181367,"id":"103","node":"pve","user":"root@pam","type":"vzcreate","tokenid":"terraform","starttime":1728625025,"upid":"UPID:pve:0002C477:002EBEB5:6708B981:vzcreate:103:root@pam!terraform:","status":"running","pstart":3063477}}
+2024/10/11 00:37:05 >>>>>>>>>> REQUEST:
+GET /api2/json/nodes/pve/tasks/UPID:pve:0002C477:002EBEB5:6708B981:vzcreate:103:root@pam!terraform:/status HTTP/1.1
+Host: 192.168.2.18:8006
+User-Agent: Go-http-client/1.1
+Accept: application/json
+Authorization: PVEAPIToken=root@pam!terraform=bdeb84a5-2cc6-4b12-a135-e6b81d88366c
+Accept-Encoding: gzip
+
+2024/10/11 00:37:05 <<<<<<<<<< RESULT:
+HTTP/1.1 200 OK
+Content-Length: 242
+Cache-Control: max-age=0
+Connection: Keep-Alive
+Connection: Keep-Alive
+Content-Type: application/json;charset=UTF-8
+Date: Fri, 11 Oct 2024 05:37:15 GMT
+Expires: Fri, 11 Oct 2024 05:37:15 GMT
+Pragma: no-cache
+Server: pve-api-daemon/3.0
+
+{"data":{"status":"running","pstart":3063477,"upid":"UPID:pve:0002C477:002EBEB5:6708B981:vzcreate:103:root@pam!terraform:","tokenid":"terraform","type":"vzcreate","starttime":1728625025,"pid":181367,"id":"103","node":"pve","user":"root@pam"}}
+2024/10/11 00:37:07 >>>>>>>>>> REQUEST:
+GET /api2/json/nodes/pve/tasks/UPID:pve:0002C477:002EBEB5:6708B981:vzcreate:103:root@pam!terraform:/status HTTP/1.1
+Host: 192.168.2.18:8006
+User-Agent: Go-http-client/1.1
+Accept: application/json
+Authorization: PVEAPIToken=root@pam!terraform=bdeb84a5-2cc6-4b12-a135-e6b81d88366c
+Accept-Encoding: gzip
+
+2024/10/11 00:37:07 <<<<<<<<<< RESULT:
+HTTP/1.1 200 OK
+Content-Length: 242
+Cache-Control: max-age=0
+Connection: Keep-Alive
+Connection: Keep-Alive
+Content-Type: application/json;charset=UTF-8
+Date: Fri, 11 Oct 2024 05:37:17 GMT
+Expires: Fri, 11 Oct 2024 05:37:17 GMT
+Pragma: no-cache
+Server: pve-api-daemon/3.0
+
+{"data":{"user":"root@pam","node":"pve","id":"103","pid":181367,"starttime":1728625025,"tokenid":"terraform","type":"vzcreate","upid":"UPID:pve:0002C477:002EBEB5:6708B981:vzcreate:103:root@pam!terraform:","pstart":3063477,"status":"running"}}
+2024/10/11 00:37:09 >>>>>>>>>> REQUEST:
+GET /api2/json/nodes/pve/tasks/UPID:pve:0002C477:002EBEB5:6708B981:vzcreate:103:root@pam!terraform:/status HTTP/1.1
+Host: 192.168.2.18:8006
+User-Agent: Go-http-client/1.1
+Accept: application/json
+Authorization: PVEAPIToken=root@pam!terraform=bdeb84a5-2cc6-4b12-a135-e6b81d88366c
+Accept-Encoding: gzip
+
+2024/10/11 00:37:09 <<<<<<<<<< RESULT:
+HTTP/1.1 200 OK
+Content-Length: 242
+Cache-Control: max-age=0
+Connection: Keep-Alive
+Connection: Keep-Alive
+Content-Type: application/json;charset=UTF-8
+Date: Fri, 11 Oct 2024 05:37:19 GMT
+Expires: Fri, 11 Oct 2024 05:37:19 GMT
+Pragma: no-cache
+Server: pve-api-daemon/3.0
+
+{"data":{"pstart":3063477,"status":"running","upid":"UPID:pve:0002C477:002EBEB5:6708B981:vzcreate:103:root@pam!terraform:","starttime":1728625025,"type":"vzcreate","tokenid":"terraform","user":"root@pam","node":"pve","id":"103","pid":181367}}
+2024/10/11 00:37:11 >>>>>>>>>> REQUEST:
+GET /api2/json/nodes/pve/tasks/UPID:pve:0002C477:002EBEB5:6708B981:vzcreate:103:root@pam!terraform:/status HTTP/1.1
+Host: 192.168.2.18:8006
+User-Agent: Go-http-client/1.1
+Accept: application/json
+Authorization: PVEAPIToken=root@pam!terraform=bdeb84a5-2cc6-4b12-a135-e6b81d88366c
+Accept-Encoding: gzip
+
+2024/10/11 00:37:11 <<<<<<<<<< RESULT:
+HTTP/1.1 200 OK
+Content-Length: 242
+Cache-Control: max-age=0
+Connection: Keep-Alive
+Connection: Keep-Alive
+Content-Type: application/json;charset=UTF-8
+Date: Fri, 11 Oct 2024 05:37:21 GMT
+Expires: Fri, 11 Oct 2024 05:37:21 GMT
+Pragma: no-cache
+Server: pve-api-daemon/3.0
+
+{"data":{"id":"103","pid":181367,"user":"root@pam","node":"pve","starttime":1728625025,"type":"vzcreate","tokenid":"terraform","upid":"UPID:pve:0002C477:002EBEB5:6708B981:vzcreate:103:root@pam!terraform:","status":"running","pstart":3063477}}
+2024/10/11 00:37:13 >>>>>>>>>> REQUEST:
+GET /api2/json/nodes/pve/tasks/UPID:pve:0002C477:002EBEB5:6708B981:vzcreate:103:root@pam!terraform:/status HTTP/1.1
+Host: 192.168.2.18:8006
+User-Agent: Go-http-client/1.1
+Accept: application/json
+Authorization: PVEAPIToken=root@pam!terraform=bdeb84a5-2cc6-4b12-a135-e6b81d88366c
+Accept-Encoding: gzip
+
+2024/10/11 00:37:13 <<<<<<<<<< RESULT:
+HTTP/1.1 200 OK
+Content-Length: 242
+Cache-Control: max-age=0
+Connection: Keep-Alive
+Connection: Keep-Alive
+Content-Type: application/json;charset=UTF-8
+Date: Fri, 11 Oct 2024 05:37:23 GMT
+Expires: Fri, 11 Oct 2024 05:37:23 GMT
+Pragma: no-cache
+Server: pve-api-daemon/3.0
+
+{"data":{"starttime":1728625025,"tokenid":"terraform","type":"vzcreate","id":"103","pid":181367,"user":"root@pam","node":"pve","status":"running","pstart":3063477,"upid":"UPID:pve:0002C477:002EBEB5:6708B981:vzcreate:103:root@pam!terraform:"}}
+2024/10/11 00:37:15 >>>>>>>>>> REQUEST:
+GET /api2/json/nodes/pve/tasks/UPID:pve:0002C477:002EBEB5:6708B981:vzcreate:103:root@pam!terraform:/status HTTP/1.1
+Host: 192.168.2.18:8006
+User-Agent: Go-http-client/1.1
+Accept: application/json
+Authorization: PVEAPIToken=root@pam!terraform=bdeb84a5-2cc6-4b12-a135-e6b81d88366c
+Accept-Encoding: gzip
+
+2024/10/11 00:37:15 <<<<<<<<<< RESULT:
+HTTP/1.1 200 OK
+Content-Length: 260
+Cache-Control: max-age=0
+Connection: Keep-Alive
+Connection: Keep-Alive
+Content-Type: application/json;charset=UTF-8
+Date: Fri, 11 Oct 2024 05:37:25 GMT
+Expires: Fri, 11 Oct 2024 05:37:25 GMT
+Pragma: no-cache
+Server: pve-api-daemon/3.0
+
+{"data":{"upid":"UPID:pve:0002C477:002EBEB5:6708B981:vzcreate:103:root@pam!terraform:","status":"stopped","exitstatus":"OK","pstart":3063477,"id":"103","pid":181367,"user":"root@pam","node":"pve","starttime":1728625025,"tokenid":"terraform","type":"vzcreate"}}
+2024/10/11 00:37:15 >>>>>>>>>> REQUEST:
+GET /api2/json/cluster/resources?type=vm HTTP/1.1
+Host: 192.168.2.18:8006
+User-Agent: Go-http-client/1.1
+Accept: application/json
+Authorization: PVEAPIToken=root@pam!terraform=bdeb84a5-2cc6-4b12-a135-e6b81d88366c
+Accept-Encoding: gzip
+
+2024/10/11 00:37:15 <<<<<<<<<< RESULT:
+HTTP/1.1 200 OK
+Content-Length: 998
+Cache-Control: max-age=0
+Connection: Keep-Alive
+Content-Type: application/json;charset=UTF-8
+Date: Fri, 11 Oct 2024 05:37:25 GMT
+Expires: Fri, 11 Oct 2024 05:37:25 GMT
+Pragma: no-cache
+Server: pve-api-daemon/3.0
+
+{"data":[{"id":"qemu/100","name":"DevMachine","template":0,"node":"pve","cpu":0,"maxcpu":4,"maxdisk":214748364800,"netout":0,"status":"stopped","mem":0,"vmid":100,"diskwrite":0,"uptime":0,"type":"qemu","disk":0,"maxmem":8518631424,"diskread":0,"netin":0},{"disk":0,"type":"qemu","uptime":0,"diskwrite":0,"vmid":101,"netin":0,"diskread":0,"maxmem":8518631424,"node":"pve","template":0,"name":"GithubActions","id":"qemu/101","status":"stopped","mem":0,"maxdisk":214748364800,"maxcpu":4,"netout":0,"cpu":0},{"maxmem":4294967296,"diskread":0,"netin":0,"vmid":102,"diskwrite":0,"type":"qemu","uptime":0,"disk":0,"cpu":0,"netout":0,"maxcpu":2,"maxdisk":34359738368,"mem":0,"status":"stopped","id":"qemu/102","name":"JiraOpenSource","node":"pve","template":0},{"template":0,"node":"pve","id":"lxc/103","name":"lxc-huly-srv","status":"stopped","mem":0,"cpu":0,"maxcpu":4,"maxdisk":8589934592,"netout":0,"uptime":0,"type":"lxc","disk":0,"vmid":103,"diskwrite":0,"diskread":0,"netin":0,"maxmem":2147483648}]}
+2024/10/11 00:37:15 >>>>>>>>>> REQUEST:
+GET /api2/json/nodes/pve/lxc/103/config HTTP/1.1
+Host: 192.168.2.18:8006
+User-Agent: Go-http-client/1.1
+Accept: application/json
+Authorization: PVEAPIToken=root@pam!terraform=bdeb84a5-2cc6-4b12-a135-e6b81d88366c
+Accept-Encoding: gzip
+
+2024/10/11 00:37:15 <<<<<<<<<< RESULT:
+HTTP/1.1 200 OK
+Content-Length: 419
+Cache-Control: max-age=0
+Connection: Keep-Alive
+Content-Type: application/json;charset=UTF-8
+Date: Fri, 11 Oct 2024 05:37:25 GMT
+Expires: Fri, 11 Oct 2024 05:37:25 GMT
+Pragma: no-cache
+Server: pve-api-daemon/3.0
+
+{"data":{"swap":0,"onboot":1,"console":1,"cpulimit":"0","unprivileged":1,"tty":2,"hostname":"lxc-huly-srv","memory":2048,"cmode":"tty","net0":"name=eth0,bridge=vmbr0,gw=192.168.2.1,hwaddr=D2:23:68:18:14:46,ip=192.168.2.30/24,type=veth","ostype":"ubuntu","cpuunits":1024,"rootfs":"local-lvm:vm-103-disk-0,size=8G","features":"nesting=1","digest":"47e8f002832996b3d61511015a487565e34fb2d3","arch":"amd64","protection":0}}
+2024/10/11 00:37:15 >>>>>>>>>> REQUEST:
+GET /api2/json/cluster/ha/resources/103 HTTP/1.1
+Host: 192.168.2.18:8006
+User-Agent: Go-http-client/1.1
+Accept: application/json
+Authorization: PVEAPIToken=root@pam!terraform=bdeb84a5-2cc6-4b12-a135-e6b81d88366c
+Accept-Encoding: gzip
+
+2024/10/11 00:37:15 <<<<<<<<<< RESULT:
+HTTP/1.1 500 no such resource 'ct:103'
+Connection: close
+Content-Length: 13
+Cache-Control: max-age=0
+Content-Type: application/json;charset=UTF-8
+Date: Fri, 11 Oct 2024 05:37:25 GMT
+Expires: Fri, 11 Oct 2024 05:37:25 GMT
+Pragma: no-cache
+Server: pve-api-daemon/3.0
+
+{"data":null}
+2024/10/11 00:37:15 >>>>>>>>>> REQUEST:
+GET /api2/json/pools HTTP/1.1
+Host: 192.168.2.18:8006
+User-Agent: Go-http-client/1.1
+Accept: application/json
+Authorization: PVEAPIToken=root@pam!terraform=bdeb84a5-2cc6-4b12-a135-e6b81d88366c
+Accept-Encoding: gzip
+
+2024/10/11 00:37:15 <<<<<<<<<< RESULT:
+HTTP/1.1 200 OK
+Content-Length: 11
+Cache-Control: max-age=0
+Connection: Keep-Alive
+Content-Type: application/json;charset=UTF-8
+Date: Fri, 11 Oct 2024 05:37:25 GMT
+Expires: Fri, 11 Oct 2024 05:37:25 GMT
+Pragma: no-cache
+Server: pve-api-daemon/3.0
+
+{"data":[]}
+[90mFri, 11 Oct 2024 00:38:06 -0500[0m [32mINF[0m [1mgithub.com/Telmate/terraform-provider-proxmox/v2/proxmox/util.go:158[0m[36m >[0m [1mEnabling the capture of log-library logs as ithe _capturelog flag was detected[0m
+[90mFri, 11 Oct 2024 00:38:06 -0500[0m [32mINF[0m [1mgithub.com/Telmate/terraform-provider-proxmox/v2/proxmox/util.go:191[0m[36m >[0m [1mLogging Started. Root Logger Set to level debug[0m
+2024/10/11 00:38:06 >>>>>>>>>> REQUEST:
+GET /api2/json/cluster/resources?type=vm HTTP/1.1
+Host: 192.168.2.18:8006
+User-Agent: Go-http-client/1.1
+Accept: application/json
+Authorization: PVEAPIToken=root@pam!terraform=bdeb84a5-2cc6-4b12-a135-e6b81d88366c
+Accept-Encoding: gzip
+
+2024/10/11 00:38:06 <<<<<<<<<< RESULT:
+HTTP/1.1 200 OK
+Content-Length: 1034
+Cache-Control: max-age=0
+Connection: Keep-Alive
+Content-Type: application/json;charset=UTF-8
+Date: Fri, 11 Oct 2024 05:38:16 GMT
+Expires: Fri, 11 Oct 2024 05:38:16 GMT
+Pragma: no-cache
+Server: pve-api-daemon/3.0
+
+{"data":[{"uptime":0,"type":"qemu","disk":0,"vmid":100,"diskwrite":0,"diskread":0,"netin":0,"maxmem":8518631424,"template":0,"node":"pve","id":"qemu/100","name":"DevMachine","mem":0,"status":"stopped","cpu":0,"maxdisk":214748364800,"maxcpu":4,"netout":0},{"template":0,"node":"pve","id":"qemu/101","name":"GithubActions","status":"stopped","mem":0,"cpu":0,"maxdisk":214748364800,"maxcpu":4,"netout":0,"type":"qemu","uptime":0,"disk":0,"vmid":101,"diskwrite":0,"diskread":0,"netin":0,"maxmem":8518631424},{"netout":0,"maxcpu":2,"maxdisk":34359738368,"cpu":0,"mem":0,"status":"stopped","name":"JiraOpenSource","id":"qemu/102","template":0,"node":"pve","maxmem":4294967296,"netin":0,"diskread":0,"diskwrite":0,"vmid":102,"disk":0,"uptime":0,"type":"qemu"},{"mem":30965760,"status":"running","cpu":0,"maxcpu":4,"maxdisk":8350298112,"netout":446,"node":"pve","template":0,"id":"lxc/103","name":"lxc-huly-srv","diskread":224477184,"netin":3223,"maxmem":2147483648,"uptime":40,"type":"lxc","disk":712880128,"vmid":103,"diskwrite":23969792}]}
+2024/10/11 00:38:06 >>>>>>>>>> REQUEST:
+GET /api2/json/nodes/pve/lxc/103/config HTTP/1.1
+Host: 192.168.2.18:8006
+User-Agent: Go-http-client/1.1
+Accept: application/json
+Authorization: PVEAPIToken=root@pam!terraform=bdeb84a5-2cc6-4b12-a135-e6b81d88366c
+Accept-Encoding: gzip
+
+2024/10/11 00:38:06 <<<<<<<<<< RESULT:
+HTTP/1.1 200 OK
+Content-Length: 419
+Cache-Control: max-age=0
+Connection: Keep-Alive
+Content-Type: application/json;charset=UTF-8
+Date: Fri, 11 Oct 2024 05:38:16 GMT
+Expires: Fri, 11 Oct 2024 05:38:16 GMT
+Pragma: no-cache
+Server: pve-api-daemon/3.0
+
+{"data":{"hostname":"lxc-huly-srv","cpulimit":"0","unprivileged":1,"tty":2,"console":1,"onboot":1,"swap":0,"protection":0,"features":"nesting=1","arch":"amd64","digest":"47e8f002832996b3d61511015a487565e34fb2d3","rootfs":"local-lvm:vm-103-disk-0,size=8G","cmode":"tty","net0":"name=eth0,bridge=vmbr0,gw=192.168.2.1,hwaddr=D2:23:68:18:14:46,ip=192.168.2.30/24,type=veth","ostype":"ubuntu","cpuunits":1024,"memory":2048}}
+2024/10/11 00:38:06 >>>>>>>>>> REQUEST:
+GET /api2/json/cluster/ha/resources/103 HTTP/1.1
+Host: 192.168.2.18:8006
+User-Agent: Go-http-client/1.1
+Accept: application/json
+Authorization: PVEAPIToken=root@pam!terraform=bdeb84a5-2cc6-4b12-a135-e6b81d88366c
+Accept-Encoding: gzip
+
+2024/10/11 00:38:06 <<<<<<<<<< RESULT:
+HTTP/1.1 500 no such resource 'ct:103'
+Connection: close
+Content-Length: 13
+Cache-Control: max-age=0
+Content-Type: application/json;charset=UTF-8
+Date: Fri, 11 Oct 2024 05:38:16 GMT
+Expires: Fri, 11 Oct 2024 05:38:16 GMT
+Pragma: no-cache
+Server: pve-api-daemon/3.0
+
+{"data":null}
+2024/10/11 00:38:06 >>>>>>>>>> REQUEST:
+GET /api2/json/pools HTTP/1.1
+Host: 192.168.2.18:8006
+User-Agent: Go-http-client/1.1
+Accept: application/json
+Authorization: PVEAPIToken=root@pam!terraform=bdeb84a5-2cc6-4b12-a135-e6b81d88366c
+Accept-Encoding: gzip
+
+2024/10/11 00:38:06 <<<<<<<<<< RESULT:
+HTTP/1.1 200 OK
+Content-Length: 11
+Cache-Control: max-age=0
+Connection: Keep-Alive
+Content-Type: application/json;charset=UTF-8
+Date: Fri, 11 Oct 2024 05:38:16 GMT
+Expires: Fri, 11 Oct 2024 05:38:16 GMT
+Pragma: no-cache
+Server: pve-api-daemon/3.0
+
+{"data":[]}
+[90mFri, 11 Oct 2024 00:38:06 -0500[0m [32mINF[0m [1mgithub.com/Telmate/terraform-provider-proxmox/v2/proxmox/util.go:158[0m[36m >[0m [1mEnabling the capture of log-library logs as ithe _capturelog flag was detected[0m
+[90mFri, 11 Oct 2024 00:38:06 -0500[0m [32mINF[0m [1mgithub.com/Telmate/terraform-provider-proxmox/v2/proxmox/util.go:191[0m[36m >[0m [1mLogging Started. Root Logger Set to level debug[0m
+[90mFri, 11 Oct 2024 01:02:37 -0500[0m [32mINF[0m [1mgithub.com/Telmate/terraform-provider-proxmox/v2/proxmox/util.go:158[0m[36m >[0m [1mEnabling the capture of log-library logs as ithe _capturelog flag was detected[0m
+[90mFri, 11 Oct 2024 01:02:37 -0500[0m [32mINF[0m [1mgithub.com/Telmate/terraform-provider-proxmox/v2/proxmox/util.go:191[0m[36m >[0m [1mLogging Started. Root Logger Set to level debug[0m
+2024/10/11 01:02:37 >>>>>>>>>> REQUEST:
+GET /api2/json/cluster/resources?type=vm HTTP/1.1
+Host: 192.168.2.18:8006
+User-Agent: Go-http-client/1.1
+Accept: application/json
+Authorization: PVEAPIToken=root@pam!terraform=bdeb84a5-2cc6-4b12-a135-e6b81d88366c
+Accept-Encoding: gzip
+
+2024/10/11 01:02:37 <<<<<<<<<< RESULT:
+HTTP/1.1 200 OK
+Content-Length: 1074
+Cache-Control: max-age=0
+Connection: Keep-Alive
+Content-Type: application/json;charset=UTF-8
+Date: Fri, 11 Oct 2024 06:02:47 GMT
+Expires: Fri, 11 Oct 2024 06:02:47 GMT
+Pragma: no-cache
+Server: pve-api-daemon/3.0
+
+{"data":[{"netin":0,"diskread":0,"maxmem":8518631424,"disk":0,"uptime":0,"type":"qemu","diskwrite":0,"vmid":100,"status":"stopped","mem":0,"maxcpu":4,"maxdisk":214748364800,"netout":0,"cpu":0,"template":0,"node":"pve","name":"DevMachine","id":"qemu/100"},{"id":"qemu/101","name":"GithubActions","template":0,"node":"pve","cpu":0,"netout":0,"maxdisk":214748364800,"maxcpu":4,"mem":0,"status":"stopped","vmid":101,"diskwrite":0,"type":"qemu","uptime":0,"disk":0,"maxmem":8518631424,"diskread":0,"netin":0},{"disk":0,"type":"qemu","uptime":0,"diskwrite":0,"vmid":102,"netin":0,"diskread":0,"maxmem":4294967296,"node":"pve","template":0,"name":"JiraOpenSource","id":"qemu/102","status":"stopped","mem":0,"netout":0,"maxdisk":34359738368,"maxcpu":2,"cpu":0},{"cpu":0.00497088626197317,"maxdisk":8350298112,"maxcpu":4,"netout":22788454,"mem":2359685120,"status":"running","id":"lxc/103","name":"lxc-huly-srv","template":0,"node":"pve","maxmem":4294967296,"diskread":377506562048,"netin":1845660792,"vmid":103,"diskwrite":29974020096,"uptime":1519,"type":"lxc","disk":6051618816}]}
+2024/10/11 01:02:37 >>>>>>>>>> REQUEST:
+GET /api2/json/nodes/pve/lxc/103/config HTTP/1.1
+Host: 192.168.2.18:8006
+User-Agent: Go-http-client/1.1
+Accept: application/json
+Authorization: PVEAPIToken=root@pam!terraform=bdeb84a5-2cc6-4b12-a135-e6b81d88366c
+Accept-Encoding: gzip
+
+2024/10/11 01:02:37 <<<<<<<<<< RESULT:
+HTTP/1.1 200 OK
+Content-Length: 422
+Cache-Control: max-age=0
+Connection: Keep-Alive
+Content-Type: application/json;charset=UTF-8
+Date: Fri, 11 Oct 2024 06:02:47 GMT
+Expires: Fri, 11 Oct 2024 06:02:47 GMT
+Pragma: no-cache
+Server: pve-api-daemon/3.0
+
+{"data":{"swap":4096,"onboot":1,"console":1,"cpulimit":"0","tty":2,"unprivileged":1,"hostname":"lxc-huly-srv","memory":4096,"cmode":"tty","net0":"name=eth0,bridge=vmbr0,gw=192.168.2.1,hwaddr=D2:23:68:18:14:46,ip=192.168.2.30/24,type=veth","ostype":"ubuntu","cpuunits":1024,"rootfs":"local-lvm:vm-103-disk-0,size=8G","features":"nesting=1","digest":"8dccfcb8928feb669d72d369f04d7529e5887311","arch":"amd64","protection":0}}
+2024/10/11 01:02:37 >>>>>>>>>> REQUEST:
+GET /api2/json/cluster/ha/resources/103 HTTP/1.1
+Host: 192.168.2.18:8006
+User-Agent: Go-http-client/1.1
+Accept: application/json
+Authorization: PVEAPIToken=root@pam!terraform=bdeb84a5-2cc6-4b12-a135-e6b81d88366c
+Accept-Encoding: gzip
+
+2024/10/11 01:02:37 <<<<<<<<<< RESULT:
+HTTP/1.1 500 no such resource 'ct:103'
+Connection: close
+Content-Length: 13
+Cache-Control: max-age=0
+Content-Type: application/json;charset=UTF-8
+Date: Fri, 11 Oct 2024 06:02:47 GMT
+Expires: Fri, 11 Oct 2024 06:02:47 GMT
+Pragma: no-cache
+Server: pve-api-daemon/3.0
+
+{"data":null}
+2024/10/11 01:02:37 >>>>>>>>>> REQUEST:
+GET /api2/json/pools HTTP/1.1
+Host: 192.168.2.18:8006
+User-Agent: Go-http-client/1.1
+Accept: application/json
+Authorization: PVEAPIToken=root@pam!terraform=bdeb84a5-2cc6-4b12-a135-e6b81d88366c
+Accept-Encoding: gzip
+
+2024/10/11 01:02:38 <<<<<<<<<< RESULT:
+HTTP/1.1 200 OK
+Content-Length: 11
+Cache-Control: max-age=0
+Connection: Keep-Alive
+Content-Type: application/json;charset=UTF-8
+Date: Fri, 11 Oct 2024 06:02:47 GMT
+Expires: Fri, 11 Oct 2024 06:02:47 GMT
+Pragma: no-cache
+Server: pve-api-daemon/3.0
+
+{"data":[]}
+[90mFri, 11 Oct 2024 01:02:38 -0500[0m [32mINF[0m [1mgithub.com/Telmate/terraform-provider-proxmox/v2/proxmox/util.go:158[0m[36m >[0m [1mEnabling the capture of log-library logs as ithe _capturelog flag was detected[0m
+[90mFri, 11 Oct 2024 01:02:38 -0500[0m [32mINF[0m [1mgithub.com/Telmate/terraform-provider-proxmox/v2/proxmox/util.go:191[0m[36m >[0m [1mLogging Started. Root Logger Set to level debug[0m
+2024/10/11 01:02:38 >>>>>>>>>> REQUEST:
+GET /api2/json/cluster/resources?type=vm HTTP/1.1
+Host: 192.168.2.18:8006
+User-Agent: Go-http-client/1.1
+Accept: application/json
+Authorization: PVEAPIToken=root@pam!terraform=bdeb84a5-2cc6-4b12-a135-e6b81d88366c
+Accept-Encoding: gzip
+
+2024/10/11 01:02:38 <<<<<<<<<< RESULT:
+HTTP/1.1 200 OK
+Content-Length: 1074
+Cache-Control: max-age=0
+Connection: Keep-Alive
+Content-Type: application/json;charset=UTF-8
+Date: Fri, 11 Oct 2024 06:02:47 GMT
+Expires: Fri, 11 Oct 2024 06:02:47 GMT
+Pragma: no-cache
+Server: pve-api-daemon/3.0
+
+{"data":[{"name":"DevMachine","id":"qemu/100","node":"pve","template":0,"maxcpu":4,"maxdisk":214748364800,"netout":0,"cpu":0,"mem":0,"status":"stopped","diskwrite":0,"vmid":100,"disk":0,"type":"qemu","uptime":0,"maxmem":8518631424,"netin":0,"diskread":0},{"id":"qemu/101","name":"GithubActions","template":0,"node":"pve","cpu":0,"netout":0,"maxdisk":214748364800,"maxcpu":4,"status":"stopped","mem":0,"vmid":101,"diskwrite":0,"type":"qemu","uptime":0,"disk":0,"maxmem":8518631424,"diskread":0,"netin":0},{"type":"qemu","uptime":0,"disk":0,"vmid":102,"diskwrite":0,"diskread":0,"netin":0,"maxmem":4294967296,"node":"pve","template":0,"id":"qemu/102","name":"JiraOpenSource","status":"stopped","mem":0,"cpu":0,"netout":0,"maxdisk":34359738368,"maxcpu":2},{"netout":22788454,"maxcpu":4,"maxdisk":8350298112,"cpu":0.00497088626197317,"mem":2359685120,"status":"running","name":"lxc-huly-srv","id":"lxc/103","node":"pve","template":0,"maxmem":4294967296,"netin":1845660792,"diskread":377506562048,"diskwrite":29974020096,"vmid":103,"disk":6051618816,"type":"lxc","uptime":1519}]}
+2024/10/11 01:02:38 >>>>>>>>>> REQUEST:
+PUT /api2/json/nodes/pve/lxc/103/config HTTP/1.1
+Host: 192.168.2.18:8006
+User-Agent: Go-http-client/1.1
+Content-Length: 159
+Accept: application/json
+Authorization: PVEAPIToken=root@pam!terraform=bdeb84a5-2cc6-4b12-a135-e6b81d88366c
+Content-Type: application/x-www-form-urlencoded
+Accept-Encoding: gzip
+
+arch=amd64&cmode=tty&console=1&cpulimit=0&cpuunits=1024&features=nesting%3D1&hostname=lxc-huly-srv&memory=2048&onboot=1&ostype=ubuntu&protection=0&swap=0&tty=2
+2024/10/11 01:02:39 <<<<<<<<<< RESULT:
+HTTP/1.1 200 OK
+Content-Length: 13
+Cache-Control: max-age=0
+Connection: Keep-Alive
+Connection: Keep-Alive
+Content-Type: application/json;charset=UTF-8
+Date: Fri, 11 Oct 2024 06:02:48 GMT
+Expires: Fri, 11 Oct 2024 06:02:48 GMT
+Pragma: no-cache
+Server: pve-api-daemon/3.0
+
+{"data":null}
+2024/10/11 01:02:39 >>>>>>>>>> REQUEST:
+GET /api2/json/cluster/resources?type=vm HTTP/1.1
+Host: 192.168.2.18:8006
+User-Agent: Go-http-client/1.1
+Accept: application/json
+Authorization: PVEAPIToken=root@pam!terraform=bdeb84a5-2cc6-4b12-a135-e6b81d88366c
+Accept-Encoding: gzip
+
+2024/10/11 01:02:39 <<<<<<<<<< RESULT:
+HTTP/1.1 200 OK
+Content-Length: 1074
+Cache-Control: max-age=0
+Connection: Keep-Alive
+Content-Type: application/json;charset=UTF-8
+Date: Fri, 11 Oct 2024 06:02:48 GMT
+Expires: Fri, 11 Oct 2024 06:02:48 GMT
+Pragma: no-cache
+Server: pve-api-daemon/3.0
+
+{"data":[{"cpu":0,"netout":0,"maxdisk":214748364800,"maxcpu":4,"status":"stopped","mem":0,"id":"qemu/100","name":"DevMachine","template":0,"node":"pve","maxmem":8518631424,"diskread":0,"netin":0,"vmid":100,"diskwrite":0,"uptime":0,"type":"qemu","disk":0},{"disk":0,"uptime":0,"type":"qemu","diskwrite":0,"vmid":101,"netin":0,"diskread":0,"maxmem":8518631424,"node":"pve","template":0,"name":"GithubActions","id":"qemu/101","status":"stopped","mem":0,"netout":0,"maxcpu":4,"maxdisk":214748364800,"cpu":0},{"name":"JiraOpenSource","id":"qemu/102","node":"pve","template":0,"netout":0,"maxcpu":2,"maxdisk":34359738368,"cpu":0,"status":"stopped","mem":0,"diskwrite":0,"vmid":102,"disk":0,"type":"qemu","uptime":0,"maxmem":4294967296,"netin":0,"diskread":0},{"id":"lxc/103","name":"lxc-huly-srv","template":0,"node":"pve","cpu":0.00497088626197317,"maxcpu":4,"maxdisk":8350298112,"netout":22788454,"mem":2359685120,"status":"running","vmid":103,"diskwrite":29974020096,"uptime":1519,"type":"lxc","disk":6051618816,"maxmem":4294967296,"diskread":377506562048,"netin":1845660792}]}
+2024/10/11 01:02:39 >>>>>>>>>> REQUEST:
+GET /api2/json/nodes/pve/lxc/103/config HTTP/1.1
+Host: 192.168.2.18:8006
+User-Agent: Go-http-client/1.1
+Accept: application/json
+Authorization: PVEAPIToken=root@pam!terraform=bdeb84a5-2cc6-4b12-a135-e6b81d88366c
+Accept-Encoding: gzip
+
+2024/10/11 01:02:39 <<<<<<<<<< RESULT:
+HTTP/1.1 200 OK
+Content-Length: 419
+Cache-Control: max-age=0
+Connection: Keep-Alive
+Content-Type: application/json;charset=UTF-8
+Date: Fri, 11 Oct 2024 06:02:48 GMT
+Expires: Fri, 11 Oct 2024 06:02:48 GMT
+Pragma: no-cache
+Server: pve-api-daemon/3.0
+
+{"data":{"swap":0,"onboot":1,"console":1,"tty":2,"unprivileged":1,"cpulimit":"0","hostname":"lxc-huly-srv","memory":2048,"cpuunits":1024,"net0":"name=eth0,bridge=vmbr0,gw=192.168.2.1,hwaddr=D2:23:68:18:14:46,ip=192.168.2.30/24,type=veth","cmode":"tty","ostype":"ubuntu","arch":"amd64","digest":"47e8f002832996b3d61511015a487565e34fb2d3","features":"nesting=1","rootfs":"local-lvm:vm-103-disk-0,size=8G","protection":0}}
+2024/10/11 01:02:39 >>>>>>>>>> REQUEST:
+GET /api2/json/cluster/ha/resources/103 HTTP/1.1
+Host: 192.168.2.18:8006
+User-Agent: Go-http-client/1.1
+Accept: application/json
+Authorization: PVEAPIToken=root@pam!terraform=bdeb84a5-2cc6-4b12-a135-e6b81d88366c
+Accept-Encoding: gzip
+
+2024/10/11 01:02:39 <<<<<<<<<< RESULT:
+HTTP/1.1 500 no such resource 'ct:103'
+Connection: close
+Content-Length: 13
+Cache-Control: max-age=0
+Content-Type: application/json;charset=UTF-8
+Date: Fri, 11 Oct 2024 06:02:48 GMT
+Expires: Fri, 11 Oct 2024 06:02:48 GMT
+Pragma: no-cache
+Server: pve-api-daemon/3.0
+
+{"data":null}
+2024/10/11 01:02:39 >>>>>>>>>> REQUEST:
+GET /api2/json/pools HTTP/1.1
+Host: 192.168.2.18:8006
+User-Agent: Go-http-client/1.1
+Accept: application/json
+Authorization: PVEAPIToken=root@pam!terraform=bdeb84a5-2cc6-4b12-a135-e6b81d88366c
+Accept-Encoding: gzip
+
+2024/10/11 01:02:39 <<<<<<<<<< RESULT:
+HTTP/1.1 200 OK
+Content-Length: 11
+Cache-Control: max-age=0
+Connection: Keep-Alive
+Content-Type: application/json;charset=UTF-8
+Date: Fri, 11 Oct 2024 06:02:48 GMT
+Expires: Fri, 11 Oct 2024 06:02:48 GMT
+Pragma: no-cache
+Server: pve-api-daemon/3.0
+
+{"data":[]}
+[90mFri, 11 Oct 2024 01:03:17 -0500[0m [32mINF[0m [1mgithub.com/Telmate/terraform-provider-proxmox/v2/proxmox/util.go:158[0m[36m >[0m [1mEnabling the capture of log-library logs as ithe _capturelog flag was detected[0m
+[90mFri, 11 Oct 2024 01:03:17 -0500[0m [32mINF[0m [1mgithub.com/Telmate/terraform-provider-proxmox/v2/proxmox/util.go:191[0m[36m >[0m [1mLogging Started. Root Logger Set to level debug[0m
+[90mFri, 11 Oct 2024 01:04:17 -0500[0m [32mINF[0m [1mgithub.com/Telmate/terraform-provider-proxmox/v2/proxmox/util.go:158[0m[36m >[0m [1mEnabling the capture of log-library logs as ithe _capturelog flag was detected[0m
+[90mFri, 11 Oct 2024 01:04:17 -0500[0m [32mINF[0m [1mgithub.com/Telmate/terraform-provider-proxmox/v2/proxmox/util.go:191[0m[36m >[0m [1mLogging Started. Root Logger Set to level debug[0m
+[90mFri, 11 Oct 2024 01:04:18 -0500[0m [32mINF[0m [1mgithub.com/Telmate/terraform-provider-proxmox/v2/proxmox/util.go:158[0m[36m >[0m [1mEnabling the capture of log-library logs as ithe _capturelog flag was detected[0m
+[90mFri, 11 Oct 2024 01:04:18 -0500[0m [32mINF[0m [1mgithub.com/Telmate/terraform-provider-proxmox/v2/proxmox/util.go:191[0m[36m >[0m [1mLogging Started. Root Logger Set to level debug[0m
+2024/10/11 01:04:20 [DEBUG] setting computed for "unused" from ComputedKeys
+2024/10/11 01:04:20 >>>>>>>>>> REQUEST:
+GET /api2/json/cluster/nextid HTTP/1.1
+Host: 192.168.2.18:8006
+User-Agent: Go-http-client/1.1
+Accept: application/json
+Authorization: PVEAPIToken=root@pam!terraform=bdeb84a5-2cc6-4b12-a135-e6b81d88366c
+Accept-Encoding: gzip
+
+2024/10/11 01:04:20 <<<<<<<<<< RESULT:
+HTTP/1.1 200 OK
+Content-Length: 14
+Cache-Control: max-age=0
+Connection: Keep-Alive
+Content-Type: application/json;charset=UTF-8
+Date: Fri, 11 Oct 2024 06:04:30 GMT
+Expires: Fri, 11 Oct 2024 06:04:30 GMT
+Pragma: no-cache
+Server: pve-api-daemon/3.0
+
+{"data":"103"}
+2024/10/11 01:04:20 >>>>>>>>>> REQUEST:
+POST /api2/json/nodes/pve/lxc HTTP/1.1
+Host: 192.168.2.18:8006
+User-Agent: Go-http-client/1.1
+Content-Length: 1180
+Accept: application/json
+Authorization: PVEAPIToken=root@pam!terraform=bdeb84a5-2cc6-4b12-a135-e6b81d88366c
+Content-Type: application/x-www-form-urlencoded
+Accept-Encoding: gzip
+
+arch=amd64&cmode=tty&console=1&cores=4&cpulimit=0&cpuunits=1024&features=nesting%3D1&hostname=lxc-huly-srv&memory=4096&net0=gw%3D192.168.2.1%2Cbridge%3Dvmbr0%2Cip%3D192.168.2.30%2F24%2Cname%3Deth0&onboot=1&ostemplate=local%3Avztmpl%2Fubuntu-20.04-standard_20.04-1_amd64.tar.gz&password=52878911&protection=0&rootfs=local-lvm%3A8&ssh-public-keys=ssh-rsa+AAAAB3NzaC1yc2EAAAADAQABAAACAQC%2B4EgCGSsliq3U9jytRUlMUtg0dyKzv6hm9qMOng9UYwnUaS9s%2FFcCuKiulSivDtr1L2C9Z3dEL9nT4LeAjI6DkXNRd9ewK1yq832IqjeQWnKNGYtHKn9ixR5kelG769BJrJ0YU5zrZBAnNn4cUvUC7FGmUOOqILNXwWY%2Bvb77AK%2F%2FrdrUupEaGB3GYS00y7T%2BpQxNMV9zSnumcAOH7%2Ft5UNWXZcxdqHGtYXLFA5GMpcWIEf9ld9KCLegk3%2FR3vbVzyFxGxPzi3VSe7KVUt5OZ8TDH%2B0Vxm%2Bj94b57AMUDgmc5BgIPcYkkwKVYvai53Y5yQfOAEHRSfwLUcPqUjaH0%2B8ka%2FBK4u7Pw0qPgejtsGnqWeyr%2F9o8x67Q5vUh5c3uuKMKkUb8VWIgmccVNB3enAKo6NSwpVuKFzyzDGeD6awzs%2FWsE5wsuIC0Bj3MkcTHUl9lz664ISPsRO7%2FoQo8ZtuKuII66s6B89FR%2B7eRei8AxDrodrj5CuixieLm6ddmRX25YL70P%2Bbmj5FT3JEk8cqRUpAKKb09aw%2FbkVys0DzkhZG0SPifoXgyZ4r0OtRlTLHVBtCk147Z55yFh9VXQpWJxTfu5%2FpvZ6DeCD5myO6C8FT4EWbsLdCpDkByRpS8o2%2FH1hPekbQ%2FzAxQ9G8R7VmgLeJtgM7EQJIvtLnxELw%3D%3D%0A&start=1&storage=local&swap=4096&tty=2&unprivileged=1&vmid=103
+2024/10/11 01:04:20 <<<<<<<<<< RESULT:
+HTTP/1.1 200 OK
+Connection: close
+Content-Length: 79
+Cache-Control: max-age=0
+Content-Type: application/json;charset=UTF-8
+Date: Fri, 11 Oct 2024 06:04:30 GMT
+Expires: Fri, 11 Oct 2024 06:04:30 GMT
+Pragma: no-cache
+Server: pve-api-daemon/3.0
+
+{"data":"UPID:pve:000352CA:00314132:6708BFEE:vzcreate:103:root@pam!terraform:"}
+2024/10/11 01:04:20 >>>>>>>>>> REQUEST:
+GET /api2/json/nodes/pve/tasks/UPID:pve:000352CA:00314132:6708BFEE:vzcreate:103:root@pam!terraform:/status HTTP/1.1
+Host: 192.168.2.18:8006
+User-Agent: Go-http-client/1.1
+Accept: application/json
+Authorization: PVEAPIToken=root@pam!terraform=bdeb84a5-2cc6-4b12-a135-e6b81d88366c
+Accept-Encoding: gzip
+
+2024/10/11 01:04:20 <<<<<<<<<< RESULT:
+HTTP/1.1 200 OK
+Content-Length: 242
+Cache-Control: max-age=0
+Connection: Keep-Alive
+Connection: Keep-Alive
+Content-Type: application/json;charset=UTF-8
+Date: Fri, 11 Oct 2024 06:04:30 GMT
+Expires: Fri, 11 Oct 2024 06:04:30 GMT
+Pragma: no-cache
+Server: pve-api-daemon/3.0
+
+{"data":{"id":"103","pid":217802,"user":"root@pam","node":"pve","starttime":1728626670,"tokenid":"terraform","type":"vzcreate","upid":"UPID:pve:000352CA:00314132:6708BFEE:vzcreate:103:root@pam!terraform:","status":"running","pstart":3227954}}
+2024/10/11 01:04:22 >>>>>>>>>> REQUEST:
+GET /api2/json/nodes/pve/tasks/UPID:pve:000352CA:00314132:6708BFEE:vzcreate:103:root@pam!terraform:/status HTTP/1.1
+Host: 192.168.2.18:8006
+User-Agent: Go-http-client/1.1
+Accept: application/json
+Authorization: PVEAPIToken=root@pam!terraform=bdeb84a5-2cc6-4b12-a135-e6b81d88366c
+Accept-Encoding: gzip
+
+2024/10/11 01:04:22 <<<<<<<<<< RESULT:
+HTTP/1.1 200 OK
+Content-Length: 242
+Cache-Control: max-age=0
+Connection: Keep-Alive
+Connection: Keep-Alive
+Content-Type: application/json;charset=UTF-8
+Date: Fri, 11 Oct 2024 06:04:32 GMT
+Expires: Fri, 11 Oct 2024 06:04:32 GMT
+Pragma: no-cache
+Server: pve-api-daemon/3.0
+
+{"data":{"type":"vzcreate","tokenid":"terraform","starttime":1728626670,"pid":217802,"id":"103","node":"pve","user":"root@pam","status":"running","pstart":3227954,"upid":"UPID:pve:000352CA:00314132:6708BFEE:vzcreate:103:root@pam!terraform:"}}
+2024/10/11 01:04:24 >>>>>>>>>> REQUEST:
+GET /api2/json/nodes/pve/tasks/UPID:pve:000352CA:00314132:6708BFEE:vzcreate:103:root@pam!terraform:/status HTTP/1.1
+Host: 192.168.2.18:8006
+User-Agent: Go-http-client/1.1
+Accept: application/json
+Authorization: PVEAPIToken=root@pam!terraform=bdeb84a5-2cc6-4b12-a135-e6b81d88366c
+Accept-Encoding: gzip
+
+2024/10/11 01:04:24 <<<<<<<<<< RESULT:
+HTTP/1.1 200 OK
+Content-Length: 242
+Cache-Control: max-age=0
+Connection: Keep-Alive
+Connection: Keep-Alive
+Content-Type: application/json;charset=UTF-8
+Date: Fri, 11 Oct 2024 06:04:34 GMT
+Expires: Fri, 11 Oct 2024 06:04:34 GMT
+Pragma: no-cache
+Server: pve-api-daemon/3.0
+
+{"data":{"tokenid":"terraform","type":"vzcreate","starttime":1728626670,"pid":217802,"id":"103","node":"pve","user":"root@pam","status":"running","pstart":3227954,"upid":"UPID:pve:000352CA:00314132:6708BFEE:vzcreate:103:root@pam!terraform:"}}
+2024/10/11 01:04:26 >>>>>>>>>> REQUEST:
+GET /api2/json/nodes/pve/tasks/UPID:pve:000352CA:00314132:6708BFEE:vzcreate:103:root@pam!terraform:/status HTTP/1.1
+Host: 192.168.2.18:8006
+User-Agent: Go-http-client/1.1
+Accept: application/json
+Authorization: PVEAPIToken=root@pam!terraform=bdeb84a5-2cc6-4b12-a135-e6b81d88366c
+Accept-Encoding: gzip
+
+2024/10/11 01:04:26 <<<<<<<<<< RESULT:
+HTTP/1.1 200 OK
+Content-Length: 242
+Cache-Control: max-age=0
+Connection: Keep-Alive
+Connection: Keep-Alive
+Content-Type: application/json;charset=UTF-8
+Date: Fri, 11 Oct 2024 06:04:36 GMT
+Expires: Fri, 11 Oct 2024 06:04:36 GMT
+Pragma: no-cache
+Server: pve-api-daemon/3.0
+
+{"data":{"user":"root@pam","node":"pve","id":"103","pid":217802,"starttime":1728626670,"tokenid":"terraform","type":"vzcreate","upid":"UPID:pve:000352CA:00314132:6708BFEE:vzcreate:103:root@pam!terraform:","pstart":3227954,"status":"running"}}
+2024/10/11 01:04:28 >>>>>>>>>> REQUEST:
+GET /api2/json/nodes/pve/tasks/UPID:pve:000352CA:00314132:6708BFEE:vzcreate:103:root@pam!terraform:/status HTTP/1.1
+Host: 192.168.2.18:8006
+User-Agent: Go-http-client/1.1
+Accept: application/json
+Authorization: PVEAPIToken=root@pam!terraform=bdeb84a5-2cc6-4b12-a135-e6b81d88366c
+Accept-Encoding: gzip
+
+2024/10/11 01:04:28 <<<<<<<<<< RESULT:
+HTTP/1.1 200 OK
+Content-Length: 242
+Cache-Control: max-age=0
+Connection: Keep-Alive
+Connection: Keep-Alive
+Content-Type: application/json;charset=UTF-8
+Date: Fri, 11 Oct 2024 06:04:38 GMT
+Expires: Fri, 11 Oct 2024 06:04:38 GMT
+Pragma: no-cache
+Server: pve-api-daemon/3.0
+
+{"data":{"upid":"UPID:pve:000352CA:00314132:6708BFEE:vzcreate:103:root@pam!terraform:","pstart":3227954,"status":"running","user":"root@pam","node":"pve","id":"103","pid":217802,"starttime":1728626670,"type":"vzcreate","tokenid":"terraform"}}
+2024/10/11 01:04:30 >>>>>>>>>> REQUEST:
+GET /api2/json/nodes/pve/tasks/UPID:pve:000352CA:00314132:6708BFEE:vzcreate:103:root@pam!terraform:/status HTTP/1.1
+Host: 192.168.2.18:8006
+User-Agent: Go-http-client/1.1
+Accept: application/json
+Authorization: PVEAPIToken=root@pam!terraform=bdeb84a5-2cc6-4b12-a135-e6b81d88366c
+Accept-Encoding: gzip
+
+2024/10/11 01:04:30 <<<<<<<<<< RESULT:
+HTTP/1.1 200 OK
+Content-Length: 242
+Cache-Control: max-age=0
+Connection: Keep-Alive
+Connection: Keep-Alive
+Content-Type: application/json;charset=UTF-8
+Date: Fri, 11 Oct 2024 06:04:40 GMT
+Expires: Fri, 11 Oct 2024 06:04:40 GMT
+Pragma: no-cache
+Server: pve-api-daemon/3.0
+
+{"data":{"upid":"UPID:pve:000352CA:00314132:6708BFEE:vzcreate:103:root@pam!terraform:","status":"running","pstart":3227954,"pid":217802,"id":"103","node":"pve","user":"root@pam","type":"vzcreate","tokenid":"terraform","starttime":1728626670}}
+2024/10/11 01:04:32 >>>>>>>>>> REQUEST:
+GET /api2/json/nodes/pve/tasks/UPID:pve:000352CA:00314132:6708BFEE:vzcreate:103:root@pam!terraform:/status HTTP/1.1
+Host: 192.168.2.18:8006
+User-Agent: Go-http-client/1.1
+Accept: application/json
+Authorization: PVEAPIToken=root@pam!terraform=bdeb84a5-2cc6-4b12-a135-e6b81d88366c
+Accept-Encoding: gzip
+
+2024/10/11 01:04:32 <<<<<<<<<< RESULT:
+HTTP/1.1 200 OK
+Content-Length: 242
+Cache-Control: max-age=0
+Connection: Keep-Alive
+Connection: Keep-Alive
+Content-Type: application/json;charset=UTF-8
+Date: Fri, 11 Oct 2024 06:04:42 GMT
+Expires: Fri, 11 Oct 2024 06:04:42 GMT
+Pragma: no-cache
+Server: pve-api-daemon/3.0
+
+{"data":{"status":"running","pstart":3227954,"upid":"UPID:pve:000352CA:00314132:6708BFEE:vzcreate:103:root@pam!terraform:","starttime":1728626670,"tokenid":"terraform","type":"vzcreate","id":"103","pid":217802,"user":"root@pam","node":"pve"}}
+2024/10/11 01:04:34 >>>>>>>>>> REQUEST:
+GET /api2/json/nodes/pve/tasks/UPID:pve:000352CA:00314132:6708BFEE:vzcreate:103:root@pam!terraform:/status HTTP/1.1
+Host: 192.168.2.18:8006
+User-Agent: Go-http-client/1.1
+Accept: application/json
+Authorization: PVEAPIToken=root@pam!terraform=bdeb84a5-2cc6-4b12-a135-e6b81d88366c
+Accept-Encoding: gzip
+
+2024/10/11 01:04:34 <<<<<<<<<< RESULT:
+HTTP/1.1 200 OK
+Content-Length: 242
+Cache-Control: max-age=0
+Connection: Keep-Alive
+Connection: Keep-Alive
+Content-Type: application/json;charset=UTF-8
+Date: Fri, 11 Oct 2024 06:04:44 GMT
+Expires: Fri, 11 Oct 2024 06:04:44 GMT
+Pragma: no-cache
+Server: pve-api-daemon/3.0
+
+{"data":{"id":"103","pid":217802,"user":"root@pam","node":"pve","starttime":1728626670,"type":"vzcreate","tokenid":"terraform","upid":"UPID:pve:000352CA:00314132:6708BFEE:vzcreate:103:root@pam!terraform:","status":"running","pstart":3227954}}
+2024/10/11 01:04:36 >>>>>>>>>> REQUEST:
+GET /api2/json/nodes/pve/tasks/UPID:pve:000352CA:00314132:6708BFEE:vzcreate:103:root@pam!terraform:/status HTTP/1.1
+Host: 192.168.2.18:8006
+User-Agent: Go-http-client/1.1
+Accept: application/json
+Authorization: PVEAPIToken=root@pam!terraform=bdeb84a5-2cc6-4b12-a135-e6b81d88366c
+Accept-Encoding: gzip
+
+2024/10/11 01:04:36 <<<<<<<<<< RESULT:
+HTTP/1.1 200 OK
+Content-Length: 242
+Cache-Control: max-age=0
+Connection: Keep-Alive
+Connection: Keep-Alive
+Content-Type: application/json;charset=UTF-8
+Date: Fri, 11 Oct 2024 06:04:46 GMT
+Expires: Fri, 11 Oct 2024 06:04:46 GMT
+Pragma: no-cache
+Server: pve-api-daemon/3.0
+
+{"data":{"upid":"UPID:pve:000352CA:00314132:6708BFEE:vzcreate:103:root@pam!terraform:","status":"running","pstart":3227954,"id":"103","pid":217802,"user":"root@pam","node":"pve","starttime":1728626670,"tokenid":"terraform","type":"vzcreate"}}
+2024/10/11 01:04:38 >>>>>>>>>> REQUEST:
+GET /api2/json/nodes/pve/tasks/UPID:pve:000352CA:00314132:6708BFEE:vzcreate:103:root@pam!terraform:/status HTTP/1.1
+Host: 192.168.2.18:8006
+User-Agent: Go-http-client/1.1
+Accept: application/json
+Authorization: PVEAPIToken=root@pam!terraform=bdeb84a5-2cc6-4b12-a135-e6b81d88366c
+Accept-Encoding: gzip
+
+2024/10/11 01:04:38 <<<<<<<<<< RESULT:
+HTTP/1.1 200 OK
+Content-Length: 242
+Cache-Control: max-age=0
+Connection: Keep-Alive
+Connection: Keep-Alive
+Content-Type: application/json;charset=UTF-8
+Date: Fri, 11 Oct 2024 06:04:48 GMT
+Expires: Fri, 11 Oct 2024 06:04:48 GMT
+Pragma: no-cache
+Server: pve-api-daemon/3.0
+
+{"data":{"status":"running","pstart":3227954,"upid":"UPID:pve:000352CA:00314132:6708BFEE:vzcreate:103:root@pam!terraform:","tokenid":"terraform","type":"vzcreate","starttime":1728626670,"pid":217802,"id":"103","node":"pve","user":"root@pam"}}
+2024/10/11 01:04:40 >>>>>>>>>> REQUEST:
+GET /api2/json/nodes/pve/tasks/UPID:pve:000352CA:00314132:6708BFEE:vzcreate:103:root@pam!terraform:/status HTTP/1.1
+Host: 192.168.2.18:8006
+User-Agent: Go-http-client/1.1
+Accept: application/json
+Authorization: PVEAPIToken=root@pam!terraform=bdeb84a5-2cc6-4b12-a135-e6b81d88366c
+Accept-Encoding: gzip
+
+2024/10/11 01:04:40 <<<<<<<<<< RESULT:
+HTTP/1.1 200 OK
+Content-Length: 260
+Cache-Control: max-age=0
+Connection: Keep-Alive
+Connection: Keep-Alive
+Content-Type: application/json;charset=UTF-8
+Date: Fri, 11 Oct 2024 06:04:50 GMT
+Expires: Fri, 11 Oct 2024 06:04:50 GMT
+Pragma: no-cache
+Server: pve-api-daemon/3.0
+
+{"data":{"node":"pve","user":"root@pam","pid":217802,"id":"103","tokenid":"terraform","type":"vzcreate","starttime":1728626670,"upid":"UPID:pve:000352CA:00314132:6708BFEE:vzcreate:103:root@pam!terraform:","pstart":3227954,"exitstatus":"OK","status":"stopped"}}
+2024/10/11 01:04:40 >>>>>>>>>> REQUEST:
+GET /api2/json/cluster/resources?type=vm HTTP/1.1
+Host: 192.168.2.18:8006
+User-Agent: Go-http-client/1.1
+Accept: application/json
+Authorization: PVEAPIToken=root@pam!terraform=bdeb84a5-2cc6-4b12-a135-e6b81d88366c
+Accept-Encoding: gzip
+
+2024/10/11 01:04:40 <<<<<<<<<< RESULT:
+HTTP/1.1 200 OK
+Content-Length: 998
+Cache-Control: max-age=0
+Connection: Keep-Alive
+Content-Type: application/json;charset=UTF-8
+Date: Fri, 11 Oct 2024 06:04:50 GMT
+Expires: Fri, 11 Oct 2024 06:04:50 GMT
+Pragma: no-cache
+Server: pve-api-daemon/3.0
+
+{"data":[{"uptime":0,"type":"qemu","disk":0,"vmid":100,"diskwrite":0,"diskread":0,"netin":0,"maxmem":8518631424,"node":"pve","template":0,"id":"qemu/100","name":"DevMachine","mem":0,"status":"stopped","cpu":0,"netout":0,"maxcpu":4,"maxdisk":214748364800},{"node":"pve","template":0,"name":"GithubActions","id":"qemu/101","status":"stopped","mem":0,"maxcpu":4,"maxdisk":214748364800,"netout":0,"cpu":0,"disk":0,"uptime":0,"type":"qemu","diskwrite":0,"vmid":101,"netin":0,"diskread":0,"maxmem":8518631424},{"status":"stopped","mem":0,"cpu":0,"maxcpu":2,"maxdisk":34359738368,"netout":0,"template":0,"node":"pve","id":"qemu/102","name":"JiraOpenSource","diskread":0,"netin":0,"maxmem":4294967296,"uptime":0,"type":"qemu","disk":0,"vmid":102,"diskwrite":0},{"vmid":103,"diskwrite":0,"type":"lxc","uptime":0,"disk":0,"maxmem":4294967296,"diskread":0,"netin":0,"id":"lxc/103","name":"lxc-huly-srv","template":0,"node":"pve","cpu":0,"maxdisk":8589934592,"maxcpu":4,"netout":0,"status":"stopped","mem":0}]}
+2024/10/11 01:04:40 >>>>>>>>>> REQUEST:
+GET /api2/json/nodes/pve/lxc/103/config HTTP/1.1
+Host: 192.168.2.18:8006
+User-Agent: Go-http-client/1.1
+Accept: application/json
+Authorization: PVEAPIToken=root@pam!terraform=bdeb84a5-2cc6-4b12-a135-e6b81d88366c
+Accept-Encoding: gzip
+
+2024/10/11 01:04:40 <<<<<<<<<< RESULT:
+HTTP/1.1 200 OK
+Content-Length: 432
+Cache-Control: max-age=0
+Connection: Keep-Alive
+Content-Type: application/json;charset=UTF-8
+Date: Fri, 11 Oct 2024 06:04:50 GMT
+Expires: Fri, 11 Oct 2024 06:04:50 GMT
+Pragma: no-cache
+Server: pve-api-daemon/3.0
+
+{"data":{"protection":0,"rootfs":"local-lvm:vm-103-disk-0,size=8G","digest":"0f5cb7fd03966f2c8bef069de01de4638a316830","arch":"amd64","features":"nesting=1","cpuunits":1024,"ostype":"ubuntu","cmode":"tty","net0":"name=eth0,bridge=vmbr0,gw=192.168.2.1,hwaddr=C2:54:D1:52:AA:66,ip=192.168.2.30/24,type=veth","memory":4096,"hostname":"lxc-huly-srv","cores":4,"tty":2,"unprivileged":1,"cpulimit":"0","console":1,"onboot":1,"swap":4096}}
+2024/10/11 01:04:40 >>>>>>>>>> REQUEST:
+GET /api2/json/cluster/ha/resources/103 HTTP/1.1
+Host: 192.168.2.18:8006
+User-Agent: Go-http-client/1.1
+Accept: application/json
+Authorization: PVEAPIToken=root@pam!terraform=bdeb84a5-2cc6-4b12-a135-e6b81d88366c
+Accept-Encoding: gzip
+
+2024/10/11 01:04:40 <<<<<<<<<< RESULT:
+HTTP/1.1 500 no such resource 'ct:103'
+Connection: close
+Content-Length: 13
+Cache-Control: max-age=0
+Content-Type: application/json;charset=UTF-8
+Date: Fri, 11 Oct 2024 06:04:50 GMT
+Expires: Fri, 11 Oct 2024 06:04:50 GMT
+Pragma: no-cache
+Server: pve-api-daemon/3.0
+
+{"data":null}
+2024/10/11 01:04:40 >>>>>>>>>> REQUEST:
+GET /api2/json/pools HTTP/1.1
+Host: 192.168.2.18:8006
+User-Agent: Go-http-client/1.1
+Accept: application/json
+Authorization: PVEAPIToken=root@pam!terraform=bdeb84a5-2cc6-4b12-a135-e6b81d88366c
+Accept-Encoding: gzip
+
+2024/10/11 01:04:40 <<<<<<<<<< RESULT:
+HTTP/1.1 200 OK
+Content-Length: 11
+Cache-Control: max-age=0
+Connection: Keep-Alive
+Content-Type: application/json;charset=UTF-8
+Date: Fri, 11 Oct 2024 06:04:50 GMT
+Expires: Fri, 11 Oct 2024 06:04:50 GMT
+Pragma: no-cache
+Server: pve-api-daemon/3.0
+
+{"data":[]}
+[90mFri, 11 Oct 2024 01:15:49 -0500[0m [32mINF[0m [1mgithub.com/Telmate/terraform-provider-proxmox/v2/proxmox/util.go:158[0m[36m >[0m [1mEnabling the capture of log-library logs as ithe _capturelog flag was detected[0m
+[90mFri, 11 Oct 2024 01:15:49 -0500[0m [32mINF[0m [1mgithub.com/Telmate/terraform-provider-proxmox/v2/proxmox/util.go:191[0m[36m >[0m [1mLogging Started. Root Logger Set to level debug[0m
+2024/10/11 01:15:49 >>>>>>>>>> REQUEST:
+GET /api2/json/cluster/resources?type=vm HTTP/1.1
+Host: 192.168.2.18:8006
+User-Agent: Go-http-client/1.1
+Accept: application/json
+Authorization: PVEAPIToken=root@pam!terraform=bdeb84a5-2cc6-4b12-a135-e6b81d88366c
+Accept-Encoding: gzip
+
+2024/10/11 01:15:49 <<<<<<<<<< RESULT:
+HTTP/1.1 200 OK
+Content-Length: 1036
+Cache-Control: max-age=0
+Connection: Keep-Alive
+Content-Type: application/json;charset=UTF-8
+Date: Fri, 11 Oct 2024 06:15:59 GMT
+Expires: Fri, 11 Oct 2024 06:15:59 GMT
+Pragma: no-cache
+Server: pve-api-daemon/3.0
+
+{"data":[{"id":"qemu/100","name":"DevMachine","node":"pve","template":0,"cpu":0,"maxcpu":4,"maxdisk":214748364800,"netout":0,"status":"stopped","mem":0,"vmid":100,"diskwrite":0,"uptime":0,"type":"qemu","disk":0,"maxmem":8518631424,"diskread":0,"netin":0},{"netout":0,"maxdisk":214748364800,"maxcpu":4,"cpu":0,"status":"stopped","mem":0,"name":"GithubActions","id":"qemu/101","template":0,"node":"pve","maxmem":8518631424,"netin":0,"diskread":0,"diskwrite":0,"vmid":101,"disk":0,"uptime":0,"type":"qemu"},{"mem":0,"status":"stopped","cpu":0,"netout":0,"maxdisk":34359738368,"maxcpu":2,"node":"pve","template":0,"id":"qemu/102","name":"JiraOpenSource","diskread":0,"netin":0,"maxmem":4294967296,"uptime":0,"type":"qemu","disk":0,"vmid":102,"diskwrite":0},{"cpu":0,"maxcpu":4,"maxdisk":8350298112,"netout":446,"mem":31051776,"status":"running","id":"lxc/103","name":"lxc-huly-srv","template":0,"node":"pve","maxmem":4294967296,"diskread":227622912,"netin":47747,"vmid":103,"diskwrite":24608768,"uptime":665,"type":"lxc","disk":712888320}]}
+2024/10/11 01:15:49 >>>>>>>>>> REQUEST:
+GET /api2/json/nodes/pve/lxc/103/config HTTP/1.1
+Host: 192.168.2.18:8006
+User-Agent: Go-http-client/1.1
+Accept: application/json
+Authorization: PVEAPIToken=root@pam!terraform=bdeb84a5-2cc6-4b12-a135-e6b81d88366c
+Accept-Encoding: gzip
+
+2024/10/11 01:15:49 <<<<<<<<<< RESULT:
+HTTP/1.1 200 OK
+Content-Length: 432
+Cache-Control: max-age=0
+Connection: Keep-Alive
+Content-Type: application/json;charset=UTF-8
+Date: Fri, 11 Oct 2024 06:15:59 GMT
+Expires: Fri, 11 Oct 2024 06:15:59 GMT
+Pragma: no-cache
+Server: pve-api-daemon/3.0
+
+{"data":{"console":1,"onboot":1,"swap":4096,"hostname":"lxc-huly-srv","cores":4,"tty":2,"unprivileged":1,"cpulimit":"0","cpuunits":1024,"cmode":"tty","net0":"name=eth0,bridge=vmbr0,gw=192.168.2.1,hwaddr=C2:54:D1:52:AA:66,ip=192.168.2.30/24,type=veth","ostype":"ubuntu","memory":4096,"protection":0,"digest":"0f5cb7fd03966f2c8bef069de01de4638a316830","arch":"amd64","features":"nesting=1","rootfs":"local-lvm:vm-103-disk-0,size=8G"}}
+2024/10/11 01:15:49 >>>>>>>>>> REQUEST:
+GET /api2/json/cluster/ha/resources/103 HTTP/1.1
+Host: 192.168.2.18:8006
+User-Agent: Go-http-client/1.1
+Accept: application/json
+Authorization: PVEAPIToken=root@pam!terraform=bdeb84a5-2cc6-4b12-a135-e6b81d88366c
+Accept-Encoding: gzip
+
+2024/10/11 01:15:49 <<<<<<<<<< RESULT:
+HTTP/1.1 500 no such resource 'ct:103'
+Connection: close
+Content-Length: 13
+Cache-Control: max-age=0
+Content-Type: application/json;charset=UTF-8
+Date: Fri, 11 Oct 2024 06:15:59 GMT
+Expires: Fri, 11 Oct 2024 06:15:59 GMT
+Pragma: no-cache
+Server: pve-api-daemon/3.0
+
+{"data":null}
+2024/10/11 01:15:49 >>>>>>>>>> REQUEST:
+GET /api2/json/pools HTTP/1.1
+Host: 192.168.2.18:8006
+User-Agent: Go-http-client/1.1
+Accept: application/json
+Authorization: PVEAPIToken=root@pam!terraform=bdeb84a5-2cc6-4b12-a135-e6b81d88366c
+Accept-Encoding: gzip
+
+2024/10/11 01:15:49 <<<<<<<<<< RESULT:
+HTTP/1.1 200 OK
+Content-Length: 11
+Cache-Control: max-age=0
+Connection: Keep-Alive
+Content-Type: application/json;charset=UTF-8
+Date: Fri, 11 Oct 2024 06:15:59 GMT
+Expires: Fri, 11 Oct 2024 06:15:59 GMT
+Pragma: no-cache
+Server: pve-api-daemon/3.0
+
+{"data":[]}
+[90mFri, 11 Oct 2024 01:15:50 -0500[0m [32mINF[0m [1mgithub.com/Telmate/terraform-provider-proxmox/v2/proxmox/util.go:158[0m[36m >[0m [1mEnabling the capture of log-library logs as ithe _capturelog flag was detected[0m
+[90mFri, 11 Oct 2024 01:15:50 -0500[0m [32mINF[0m [1mgithub.com/Telmate/terraform-provider-proxmox/v2/proxmox/util.go:191[0m[36m >[0m [1mLogging Started. Root Logger Set to level debug[0m
+[90mFri, 11 Oct 2024 02:27:07 -0500[0m [32mINF[0m [1mgithub.com/Telmate/terraform-provider-proxmox/v2/proxmox/util.go:158[0m[36m >[0m [1mEnabling the capture of log-library logs as ithe _capturelog flag was detected[0m
+[90mFri, 11 Oct 2024 02:27:07 -0500[0m [32mINF[0m [1mgithub.com/Telmate/terraform-provider-proxmox/v2/proxmox/util.go:191[0m[36m >[0m [1mLogging Started. Root Logger Set to level debug[0m
+2024/10/11 02:27:07 >>>>>>>>>> REQUEST:
+GET /api2/json/cluster/resources?type=vm HTTP/1.1
+Host: 192.168.2.18:8006
+User-Agent: Go-http-client/1.1
+Accept: application/json
+Authorization: PVEAPIToken=root@pam!terraform=bdeb84a5-2cc6-4b12-a135-e6b81d88366c
+Accept-Encoding: gzip
+
+2024/10/11 02:27:07 <<<<<<<<<< RESULT:
+HTTP/1.1 200 OK
+Content-Length: 754
+Cache-Control: max-age=0
+Connection: Keep-Alive
+Content-Type: application/json;charset=UTF-8
+Date: Fri, 11 Oct 2024 07:27:16 GMT
+Expires: Fri, 11 Oct 2024 07:27:16 GMT
+Pragma: no-cache
+Server: pve-api-daemon/3.0
+
+{"data":[{"mem":0,"status":"stopped","netout":0,"maxcpu":4,"maxdisk":214748364800,"cpu":0,"node":"pve","template":0,"name":"DevMachine","id":"qemu/100","netin":0,"diskread":0,"maxmem":8518631424,"disk":0,"type":"qemu","uptime":0,"diskwrite":0,"vmid":100},{"diskwrite":0,"vmid":101,"disk":0,"type":"qemu","uptime":0,"maxmem":8518631424,"netin":0,"diskread":0,"name":"GithubActions","id":"qemu/101","node":"pve","template":0,"maxcpu":4,"maxdisk":214748364800,"netout":0,"cpu":0,"mem":0,"status":"stopped"},{"type":"qemu","uptime":0,"disk":0,"vmid":102,"diskwrite":0,"diskread":0,"netin":0,"maxmem":4294967296,"template":0,"node":"pve","id":"qemu/102","name":"JiraOpenSource","status":"stopped","mem":0,"cpu":0,"netout":0,"maxcpu":2,"maxdisk":34359738368}]}
+[90mFri, 11 Oct 2024 02:27:17 -0500[0m [32mINF[0m [1mgithub.com/Telmate/terraform-provider-proxmox/v2/proxmox/util.go:158[0m[36m >[0m [1mEnabling the capture of log-library logs as ithe _capturelog flag was detected[0m
+[90mFri, 11 Oct 2024 02:27:17 -0500[0m [32mINF[0m [1mgithub.com/Telmate/terraform-provider-proxmox/v2/proxmox/util.go:191[0m[36m >[0m [1mLogging Started. Root Logger Set to level debug[0m
+[90mFri, 11 Oct 2024 02:27:18 -0500[0m [32mINF[0m [1mgithub.com/Telmate/terraform-provider-proxmox/v2/proxmox/util.go:158[0m[36m >[0m [1mEnabling the capture of log-library logs as ithe _capturelog flag was detected[0m
+[90mFri, 11 Oct 2024 02:27:18 -0500[0m [32mINF[0m [1mgithub.com/Telmate/terraform-provider-proxmox/v2/proxmox/util.go:191[0m[36m >[0m [1mLogging Started. Root Logger Set to level debug[0m
+2024/10/11 02:27:19 [DEBUG] setting computed for "unused" from ComputedKeys
+2024/10/11 02:27:19 >>>>>>>>>> REQUEST:
+GET /api2/json/cluster/nextid HTTP/1.1
+Host: 192.168.2.18:8006
+User-Agent: Go-http-client/1.1
+Accept: application/json
+Authorization: PVEAPIToken=root@pam!terraform=bdeb84a5-2cc6-4b12-a135-e6b81d88366c
+Accept-Encoding: gzip
+
+2024/10/11 02:27:19 <<<<<<<<<< RESULT:
+HTTP/1.1 200 OK
+Content-Length: 14
+Cache-Control: max-age=0
+Connection: Keep-Alive
+Content-Type: application/json;charset=UTF-8
+Date: Fri, 11 Oct 2024 07:27:28 GMT
+Expires: Fri, 11 Oct 2024 07:27:28 GMT
+Pragma: no-cache
+Server: pve-api-daemon/3.0
+
+{"data":"103"}
+2024/10/11 02:27:19 >>>>>>>>>> REQUEST:
+POST /api2/json/nodes/pve/lxc HTTP/1.1
+Host: 192.168.2.18:8006
+User-Agent: Go-http-client/1.1
+Content-Length: 1190
+Accept: application/json
+Authorization: PVEAPIToken=root@pam!terraform=bdeb84a5-2cc6-4b12-a135-e6b81d88366c
+Content-Type: application/x-www-form-urlencoded
+Accept-Encoding: gzip
+
+arch=amd64&cmode=tty&console=1&cores=4&cpulimit=0&cpuunits=1024&features=nesting%3D1&hostname=lxc-huly-srv&memory=4096&net0=bridge%3Dvmbr0%2Cip%3D192.168.2.30%2F24%2Cname%3Deth0%2Cgw%3D192.168.2.1&onboot=1&ostemplate=local%3Avztmpl%2Fubuntu-20.04-standard_20.04-1_amd64.tar.gz&password=52878911&protection=0&rootfs=local-lvm%3A8&ssh-public-keys=ssh-rsa+AAAAB3NzaC1yc2EAAAADAQABAAACAQDDJ%2FCoXwoW5x%2F09rkQiXWJ3UHu7lUD2lOxHKHrcjYBrcyVVJ4%2B286LruPG1QbSP0UXe8ExXF9jfItQWm7pikzWOIuWDsZFVQ426QF7gxuxHbGwCRhlc%2Bs%2FQw9ceHKfB1QfPFqcdxKPPUUI%2BxOmh8F4WIGSUvGBE%2B0DfzX5a7kYEmNDPwBQG6HQZw3VtIyHZCyBF5Yf1PCeivaf4tvd0I2gTtfNVd%2FEFDi1t9h7qKxx19y02b%2F%2BpjpZ%2Bb4FIZpWrNPfODlnf%2Fj19F2Is3O9Ag7aEe38Yn6SRVYBdhogK7fJTHKND7JtxtTE6fC%2ByK0R5aX%2BUNHcdtFKvv4RGiqQ%2BvFcs3lGC0rg%2F4rLFEUK7d0AeWuTGGwpDrVPBWFflGhx81m2lrsL7tpkMuh6m%2F2QeBAy8kNvIXQ1zU39I2VcbZnc6WYNJM7GJA%2BbutmHlCc6ebUMi%2B%2FgOFxcK9WCjLVcCL5jUxP2hxK4YNT8Lubr7%2BMUELVCn1j%2Bmsb4JyWxZFiWBJAMvv7aa8kyyrikmh2%2F5PqkBubPgKS5%2BVPP8q65Qjr2tauIPVGskDvYZnkYl6VDdxR8VYrC90QPUGcqnbUzEOf0sZKKTuTnttLUzYtk8Tb4FHcyOX2w8vBU6OBzXE9syMuZci2uKHpSBLNMMXmoe808yY5d%2FD5bDAlIkkAS%2BzhXmQ%3D%3D%0A&start=1&storage=local&swap=4096&tty=2&unprivileged=1&vmid=103
+2024/10/11 02:27:19 <<<<<<<<<< RESULT:
+HTTP/1.1 200 OK
+Connection: close
+Content-Length: 79
+Cache-Control: max-age=0
+Content-Type: application/json;charset=UTF-8
+Date: Fri, 11 Oct 2024 07:27:29 GMT
+Expires: Fri, 11 Oct 2024 07:27:29 GMT
+Pragma: no-cache
+Server: pve-api-daemon/3.0
+
+{"data":"UPID:pve:0003FD10:0038DA07:6708D361:vzcreate:103:root@pam!terraform:"}
+2024/10/11 02:27:19 >>>>>>>>>> REQUEST:
+GET /api2/json/nodes/pve/tasks/UPID:pve:0003FD10:0038DA07:6708D361:vzcreate:103:root@pam!terraform:/status HTTP/1.1
+Host: 192.168.2.18:8006
+User-Agent: Go-http-client/1.1
+Accept: application/json
+Authorization: PVEAPIToken=root@pam!terraform=bdeb84a5-2cc6-4b12-a135-e6b81d88366c
+Accept-Encoding: gzip
+
+2024/10/11 02:27:19 <<<<<<<<<< RESULT:
+HTTP/1.1 200 OK
+Content-Length: 242
+Cache-Control: max-age=0
+Connection: Keep-Alive
+Connection: Keep-Alive
+Content-Type: application/json;charset=UTF-8
+Date: Fri, 11 Oct 2024 07:27:29 GMT
+Expires: Fri, 11 Oct 2024 07:27:29 GMT
+Pragma: no-cache
+Server: pve-api-daemon/3.0
+
+{"data":{"upid":"UPID:pve:0003FD10:0038DA07:6708D361:vzcreate:103:root@pam!terraform:","pstart":3725831,"status":"running","node":"pve","user":"root@pam","pid":261392,"id":"103","type":"vzcreate","tokenid":"terraform","starttime":1728631649}}
+2024/10/11 02:27:21 >>>>>>>>>> REQUEST:
+GET /api2/json/nodes/pve/tasks/UPID:pve:0003FD10:0038DA07:6708D361:vzcreate:103:root@pam!terraform:/status HTTP/1.1
+Host: 192.168.2.18:8006
+User-Agent: Go-http-client/1.1
+Accept: application/json
+Authorization: PVEAPIToken=root@pam!terraform=bdeb84a5-2cc6-4b12-a135-e6b81d88366c
+Accept-Encoding: gzip
+
+2024/10/11 02:27:21 <<<<<<<<<< RESULT:
+HTTP/1.1 200 OK
+Content-Length: 242
+Cache-Control: max-age=0
+Connection: Keep-Alive
+Connection: Keep-Alive
+Content-Type: application/json;charset=UTF-8
+Date: Fri, 11 Oct 2024 07:27:31 GMT
+Expires: Fri, 11 Oct 2024 07:27:31 GMT
+Pragma: no-cache
+Server: pve-api-daemon/3.0
+
+{"data":{"type":"vzcreate","tokenid":"terraform","starttime":1728631649,"pid":261392,"id":"103","node":"pve","user":"root@pam","status":"running","pstart":3725831,"upid":"UPID:pve:0003FD10:0038DA07:6708D361:vzcreate:103:root@pam!terraform:"}}
+2024/10/11 02:27:23 >>>>>>>>>> REQUEST:
+GET /api2/json/nodes/pve/tasks/UPID:pve:0003FD10:0038DA07:6708D361:vzcreate:103:root@pam!terraform:/status HTTP/1.1
+Host: 192.168.2.18:8006
+User-Agent: Go-http-client/1.1
+Accept: application/json
+Authorization: PVEAPIToken=root@pam!terraform=bdeb84a5-2cc6-4b12-a135-e6b81d88366c
+Accept-Encoding: gzip
+
+2024/10/11 02:27:23 <<<<<<<<<< RESULT:
+HTTP/1.1 200 OK
+Content-Length: 242
+Cache-Control: max-age=0
+Connection: Keep-Alive
+Connection: Keep-Alive
+Content-Type: application/json;charset=UTF-8
+Date: Fri, 11 Oct 2024 07:27:33 GMT
+Expires: Fri, 11 Oct 2024 07:27:33 GMT
+Pragma: no-cache
+Server: pve-api-daemon/3.0
+
+{"data":{"starttime":1728631649,"type":"vzcreate","tokenid":"terraform","id":"103","pid":261392,"user":"root@pam","node":"pve","status":"running","pstart":3725831,"upid":"UPID:pve:0003FD10:0038DA07:6708D361:vzcreate:103:root@pam!terraform:"}}
+2024/10/11 02:27:25 >>>>>>>>>> REQUEST:
+GET /api2/json/nodes/pve/tasks/UPID:pve:0003FD10:0038DA07:6708D361:vzcreate:103:root@pam!terraform:/status HTTP/1.1
+Host: 192.168.2.18:8006
+User-Agent: Go-http-client/1.1
+Accept: application/json
+Authorization: PVEAPIToken=root@pam!terraform=bdeb84a5-2cc6-4b12-a135-e6b81d88366c
+Accept-Encoding: gzip
+
+2024/10/11 02:27:25 <<<<<<<<<< RESULT:
+HTTP/1.1 200 OK
+Content-Length: 242
+Cache-Control: max-age=0
+Connection: Keep-Alive
+Connection: Keep-Alive
+Content-Type: application/json;charset=UTF-8
+Date: Fri, 11 Oct 2024 07:27:35 GMT
+Expires: Fri, 11 Oct 2024 07:27:35 GMT
+Pragma: no-cache
+Server: pve-api-daemon/3.0
+
+{"data":{"node":"pve","user":"root@pam","pid":261392,"id":"103","tokenid":"terraform","type":"vzcreate","starttime":1728631649,"upid":"UPID:pve:0003FD10:0038DA07:6708D361:vzcreate:103:root@pam!terraform:","pstart":3725831,"status":"running"}}
+2024/10/11 02:27:27 >>>>>>>>>> REQUEST:
+GET /api2/json/nodes/pve/tasks/UPID:pve:0003FD10:0038DA07:6708D361:vzcreate:103:root@pam!terraform:/status HTTP/1.1
+Host: 192.168.2.18:8006
+User-Agent: Go-http-client/1.1
+Accept: application/json
+Authorization: PVEAPIToken=root@pam!terraform=bdeb84a5-2cc6-4b12-a135-e6b81d88366c
+Accept-Encoding: gzip
+
+2024/10/11 02:27:27 <<<<<<<<<< RESULT:
+HTTP/1.1 200 OK
+Content-Length: 242
+Cache-Control: max-age=0
+Connection: Keep-Alive
+Connection: Keep-Alive
+Content-Type: application/json;charset=UTF-8
+Date: Fri, 11 Oct 2024 07:27:37 GMT
+Expires: Fri, 11 Oct 2024 07:27:37 GMT
+Pragma: no-cache
+Server: pve-api-daemon/3.0
+
+{"data":{"upid":"UPID:pve:0003FD10:0038DA07:6708D361:vzcreate:103:root@pam!terraform:","status":"running","pstart":3725831,"pid":261392,"id":"103","node":"pve","user":"root@pam","tokenid":"terraform","type":"vzcreate","starttime":1728631649}}
+2024/10/11 02:27:29 >>>>>>>>>> REQUEST:
+GET /api2/json/nodes/pve/tasks/UPID:pve:0003FD10:0038DA07:6708D361:vzcreate:103:root@pam!terraform:/status HTTP/1.1
+Host: 192.168.2.18:8006
+User-Agent: Go-http-client/1.1
+Accept: application/json
+Authorization: PVEAPIToken=root@pam!terraform=bdeb84a5-2cc6-4b12-a135-e6b81d88366c
+Accept-Encoding: gzip
+
+2024/10/11 02:27:29 <<<<<<<<<< RESULT:
+HTTP/1.1 200 OK
+Content-Length: 242
+Cache-Control: max-age=0
+Connection: Keep-Alive
+Connection: Keep-Alive
+Content-Type: application/json;charset=UTF-8
+Date: Fri, 11 Oct 2024 07:27:39 GMT
+Expires: Fri, 11 Oct 2024 07:27:39 GMT
+Pragma: no-cache
+Server: pve-api-daemon/3.0
+
+{"data":{"upid":"UPID:pve:0003FD10:0038DA07:6708D361:vzcreate:103:root@pam!terraform:","pstart":3725831,"status":"running","node":"pve","user":"root@pam","pid":261392,"id":"103","type":"vzcreate","tokenid":"terraform","starttime":1728631649}}
+2024/10/11 02:27:31 >>>>>>>>>> REQUEST:
+GET /api2/json/nodes/pve/tasks/UPID:pve:0003FD10:0038DA07:6708D361:vzcreate:103:root@pam!terraform:/status HTTP/1.1
+Host: 192.168.2.18:8006
+User-Agent: Go-http-client/1.1
+Accept: application/json
+Authorization: PVEAPIToken=root@pam!terraform=bdeb84a5-2cc6-4b12-a135-e6b81d88366c
+Accept-Encoding: gzip
+
+2024/10/11 02:27:31 <<<<<<<<<< RESULT:
+HTTP/1.1 200 OK
+Content-Length: 242
+Cache-Control: max-age=0
+Connection: Keep-Alive
+Connection: Keep-Alive
+Content-Type: application/json;charset=UTF-8
+Date: Fri, 11 Oct 2024 07:27:41 GMT
+Expires: Fri, 11 Oct 2024 07:27:41 GMT
+Pragma: no-cache
+Server: pve-api-daemon/3.0
+
+{"data":{"node":"pve","user":"root@pam","pid":261392,"id":"103","tokenid":"terraform","type":"vzcreate","starttime":1728631649,"upid":"UPID:pve:0003FD10:0038DA07:6708D361:vzcreate:103:root@pam!terraform:","pstart":3725831,"status":"running"}}
+2024/10/11 02:27:33 >>>>>>>>>> REQUEST:
+GET /api2/json/nodes/pve/tasks/UPID:pve:0003FD10:0038DA07:6708D361:vzcreate:103:root@pam!terraform:/status HTTP/1.1
+Host: 192.168.2.18:8006
+User-Agent: Go-http-client/1.1
+Accept: application/json
+Authorization: PVEAPIToken=root@pam!terraform=bdeb84a5-2cc6-4b12-a135-e6b81d88366c
+Accept-Encoding: gzip
+
+2024/10/11 02:27:33 <<<<<<<<<< RESULT:
+HTTP/1.1 200 OK
+Content-Length: 242
+Cache-Control: max-age=0
+Connection: Keep-Alive
+Connection: Keep-Alive
+Content-Type: application/json;charset=UTF-8
+Date: Fri, 11 Oct 2024 07:27:43 GMT
+Expires: Fri, 11 Oct 2024 07:27:43 GMT
+Pragma: no-cache
+Server: pve-api-daemon/3.0
+
+{"data":{"starttime":1728631649,"tokenid":"terraform","type":"vzcreate","id":"103","pid":261392,"user":"root@pam","node":"pve","status":"running","pstart":3725831,"upid":"UPID:pve:0003FD10:0038DA07:6708D361:vzcreate:103:root@pam!terraform:"}}
+2024/10/11 02:27:35 >>>>>>>>>> REQUEST:
+GET /api2/json/nodes/pve/tasks/UPID:pve:0003FD10:0038DA07:6708D361:vzcreate:103:root@pam!terraform:/status HTTP/1.1
+Host: 192.168.2.18:8006
+User-Agent: Go-http-client/1.1
+Accept: application/json
+Authorization: PVEAPIToken=root@pam!terraform=bdeb84a5-2cc6-4b12-a135-e6b81d88366c
+Accept-Encoding: gzip
+
+2024/10/11 02:27:35 <<<<<<<<<< RESULT:
+HTTP/1.1 200 OK
+Content-Length: 242
+Cache-Control: max-age=0
+Connection: Keep-Alive
+Connection: Keep-Alive
+Content-Type: application/json;charset=UTF-8
+Date: Fri, 11 Oct 2024 07:27:45 GMT
+Expires: Fri, 11 Oct 2024 07:27:45 GMT
+Pragma: no-cache
+Server: pve-api-daemon/3.0
+
+{"data":{"pstart":3725831,"status":"running","upid":"UPID:pve:0003FD10:0038DA07:6708D361:vzcreate:103:root@pam!terraform:","type":"vzcreate","tokenid":"terraform","starttime":1728631649,"node":"pve","user":"root@pam","pid":261392,"id":"103"}}
+2024/10/11 02:27:37 >>>>>>>>>> REQUEST:
+GET /api2/json/nodes/pve/tasks/UPID:pve:0003FD10:0038DA07:6708D361:vzcreate:103:root@pam!terraform:/status HTTP/1.1
+Host: 192.168.2.18:8006
+User-Agent: Go-http-client/1.1
+Accept: application/json
+Authorization: PVEAPIToken=root@pam!terraform=bdeb84a5-2cc6-4b12-a135-e6b81d88366c
+Accept-Encoding: gzip
+
+2024/10/11 02:27:37 <<<<<<<<<< RESULT:
+HTTP/1.1 200 OK
+Content-Length: 242
+Cache-Control: max-age=0
+Connection: Keep-Alive
+Connection: Keep-Alive
+Content-Type: application/json;charset=UTF-8
+Date: Fri, 11 Oct 2024 07:27:47 GMT
+Expires: Fri, 11 Oct 2024 07:27:47 GMT
+Pragma: no-cache
+Server: pve-api-daemon/3.0
+
+{"data":{"id":"103","pid":261392,"user":"root@pam","node":"pve","starttime":1728631649,"tokenid":"terraform","type":"vzcreate","upid":"UPID:pve:0003FD10:0038DA07:6708D361:vzcreate:103:root@pam!terraform:","status":"running","pstart":3725831}}
+2024/10/11 02:27:39 >>>>>>>>>> REQUEST:
+GET /api2/json/nodes/pve/tasks/UPID:pve:0003FD10:0038DA07:6708D361:vzcreate:103:root@pam!terraform:/status HTTP/1.1
+Host: 192.168.2.18:8006
+User-Agent: Go-http-client/1.1
+Accept: application/json
+Authorization: PVEAPIToken=root@pam!terraform=bdeb84a5-2cc6-4b12-a135-e6b81d88366c
+Accept-Encoding: gzip
+
+2024/10/11 02:27:39 <<<<<<<<<< RESULT:
+HTTP/1.1 200 OK
+Content-Length: 260
+Cache-Control: max-age=0
+Connection: Keep-Alive
+Connection: Keep-Alive
+Content-Type: application/json;charset=UTF-8
+Date: Fri, 11 Oct 2024 07:27:49 GMT
+Expires: Fri, 11 Oct 2024 07:27:49 GMT
+Pragma: no-cache
+Server: pve-api-daemon/3.0
+
+{"data":{"id":"103","pid":261392,"user":"root@pam","node":"pve","starttime":1728631649,"tokenid":"terraform","type":"vzcreate","upid":"UPID:pve:0003FD10:0038DA07:6708D361:vzcreate:103:root@pam!terraform:","status":"stopped","exitstatus":"OK","pstart":3725831}}
+2024/10/11 02:27:39 >>>>>>>>>> REQUEST:
+GET /api2/json/cluster/resources?type=vm HTTP/1.1
+Host: 192.168.2.18:8006
+User-Agent: Go-http-client/1.1
+Accept: application/json
+Authorization: PVEAPIToken=root@pam!terraform=bdeb84a5-2cc6-4b12-a135-e6b81d88366c
+Accept-Encoding: gzip
+
+2024/10/11 02:27:39 <<<<<<<<<< RESULT:
+HTTP/1.1 200 OK
+Content-Length: 998
+Cache-Control: max-age=0
+Connection: Keep-Alive
+Content-Type: application/json;charset=UTF-8
+Date: Fri, 11 Oct 2024 07:27:49 GMT
+Expires: Fri, 11 Oct 2024 07:27:49 GMT
+Pragma: no-cache
+Server: pve-api-daemon/3.0
+
+{"data":[{"vmid":100,"diskwrite":0,"type":"qemu","uptime":0,"disk":0,"maxmem":8518631424,"diskread":0,"netin":0,"id":"qemu/100","name":"DevMachine","template":0,"node":"pve","cpu":0,"netout":0,"maxdisk":214748364800,"maxcpu":4,"mem":0,"status":"stopped"},{"mem":0,"status":"stopped","cpu":0,"netout":0,"maxcpu":4,"maxdisk":214748364800,"node":"pve","template":0,"id":"qemu/101","name":"GithubActions","diskread":0,"netin":0,"maxmem":8518631424,"type":"qemu","uptime":0,"disk":0,"vmid":101,"diskwrite":0},{"diskread":0,"netin":0,"maxmem":4294967296,"type":"qemu","uptime":0,"disk":0,"vmid":102,"diskwrite":0,"mem":0,"status":"stopped","cpu":0,"maxcpu":2,"maxdisk":34359738368,"netout":0,"node":"pve","template":0,"id":"qemu/102","name":"JiraOpenSource"},{"name":"lxc-huly-srv","id":"lxc/103","node":"pve","template":0,"maxcpu":4,"maxdisk":8589934592,"netout":0,"cpu":0,"mem":0,"status":"stopped","diskwrite":0,"vmid":103,"disk":0,"type":"lxc","uptime":0,"maxmem":4294967296,"netin":0,"diskread":0}]}
+2024/10/11 02:27:39 >>>>>>>>>> REQUEST:
+GET /api2/json/nodes/pve/lxc/103/config HTTP/1.1
+Host: 192.168.2.18:8006
+User-Agent: Go-http-client/1.1
+Accept: application/json
+Authorization: PVEAPIToken=root@pam!terraform=bdeb84a5-2cc6-4b12-a135-e6b81d88366c
+Accept-Encoding: gzip
+
+2024/10/11 02:27:39 <<<<<<<<<< RESULT:
+HTTP/1.1 200 OK
+Content-Length: 432
+Cache-Control: max-age=0
+Connection: Keep-Alive
+Content-Type: application/json;charset=UTF-8
+Date: Fri, 11 Oct 2024 07:27:49 GMT
+Expires: Fri, 11 Oct 2024 07:27:49 GMT
+Pragma: no-cache
+Server: pve-api-daemon/3.0
+
+{"data":{"unprivileged":1,"tty":2,"cpulimit":"0","hostname":"lxc-huly-srv","cores":4,"swap":4096,"onboot":1,"console":1,"rootfs":"local-lvm:vm-103-disk-0,size=8G","digest":"f204b0256be83042023ff75cb1815866952a6d94","arch":"amd64","features":"nesting=1","protection":0,"memory":4096,"cpuunits":1024,"net0":"name=eth0,bridge=vmbr0,gw=192.168.2.1,hwaddr=42:81:C4:7E:9B:17,ip=192.168.2.30/24,type=veth","cmode":"tty","ostype":"ubuntu"}}
+2024/10/11 02:27:39 >>>>>>>>>> REQUEST:
+GET /api2/json/cluster/ha/resources/103 HTTP/1.1
+Host: 192.168.2.18:8006
+User-Agent: Go-http-client/1.1
+Accept: application/json
+Authorization: PVEAPIToken=root@pam!terraform=bdeb84a5-2cc6-4b12-a135-e6b81d88366c
+Accept-Encoding: gzip
+
+2024/10/11 02:27:39 <<<<<<<<<< RESULT:
+HTTP/1.1 500 no such resource 'ct:103'
+Connection: close
+Content-Length: 13
+Cache-Control: max-age=0
+Content-Type: application/json;charset=UTF-8
+Date: Fri, 11 Oct 2024 07:27:49 GMT
+Expires: Fri, 11 Oct 2024 07:27:49 GMT
+Pragma: no-cache
+Server: pve-api-daemon/3.0
+
+{"data":null}
+2024/10/11 02:27:39 >>>>>>>>>> REQUEST:
+GET /api2/json/pools HTTP/1.1
+Host: 192.168.2.18:8006
+User-Agent: Go-http-client/1.1
+Accept: application/json
+Authorization: PVEAPIToken=root@pam!terraform=bdeb84a5-2cc6-4b12-a135-e6b81d88366c
+Accept-Encoding: gzip
+
+2024/10/11 02:27:39 <<<<<<<<<< RESULT:
+HTTP/1.1 200 OK
+Content-Length: 11
+Cache-Control: max-age=0
+Connection: Keep-Alive
+Content-Type: application/json;charset=UTF-8
+Date: Fri, 11 Oct 2024 07:27:49 GMT
+Expires: Fri, 11 Oct 2024 07:27:49 GMT
+Pragma: no-cache
+Server: pve-api-daemon/3.0
+
+{"data":[]}
+[90mFri, 11 Oct 2024 02:28:19 -0500[0m [32mINF[0m [1mgithub.com/Telmate/terraform-provider-proxmox/v2/proxmox/util.go:158[0m[36m >[0m [1mEnabling the capture of log-library logs as ithe _capturelog flag was detected[0m
+[90mFri, 11 Oct 2024 02:28:19 -0500[0m [32mINF[0m [1mgithub.com/Telmate/terraform-provider-proxmox/v2/proxmox/util.go:191[0m[36m >[0m [1mLogging Started. Root Logger Set to level debug[0m
+2024/10/11 02:28:19 >>>>>>>>>> REQUEST:
+GET /api2/json/cluster/resources?type=vm HTTP/1.1
+Host: 192.168.2.18:8006
+User-Agent: Go-http-client/1.1
+Accept: application/json
+Authorization: PVEAPIToken=root@pam!terraform=bdeb84a5-2cc6-4b12-a135-e6b81d88366c
+Accept-Encoding: gzip
+
+2024/10/11 02:28:19 <<<<<<<<<< RESULT:
+HTTP/1.1 200 OK
+Content-Length: 1035
+Cache-Control: max-age=0
+Connection: Keep-Alive
+Content-Type: application/json;charset=UTF-8
+Date: Fri, 11 Oct 2024 07:28:28 GMT
+Expires: Fri, 11 Oct 2024 07:28:28 GMT
+Pragma: no-cache
+Server: pve-api-daemon/3.0
+
+{"data":[{"status":"stopped","mem":0,"cpu":0,"netout":0,"maxdisk":214748364800,"maxcpu":4,"node":"pve","template":0,"id":"qemu/100","name":"DevMachine","diskread":0,"netin":0,"maxmem":8518631424,"type":"qemu","uptime":0,"disk":0,"vmid":100,"diskwrite":0},{"diskread":0,"netin":0,"maxmem":8518631424,"uptime":0,"type":"qemu","disk":0,"vmid":101,"diskwrite":0,"status":"stopped","mem":0,"cpu":0,"maxdisk":214748364800,"maxcpu":4,"netout":0,"node":"pve","template":0,"id":"qemu/101","name":"GithubActions"},{"uptime":0,"type":"qemu","disk":0,"vmid":102,"diskwrite":0,"diskread":0,"netin":0,"maxmem":4294967296,"node":"pve","template":0,"id":"qemu/102","name":"JiraOpenSource","status":"stopped","mem":0,"cpu":0,"maxdisk":34359738368,"maxcpu":2,"netout":0},{"vmid":103,"diskwrite":23773184,"uptime":37,"type":"lxc","disk":712880128,"maxmem":4294967296,"diskread":224411648,"netin":5459,"id":"lxc/103","name":"lxc-huly-srv","template":0,"node":"pve","cpu":0,"netout":2210,"maxcpu":4,"maxdisk":8350298112,"status":"running","mem":30945280}]}
+2024/10/11 02:28:19 >>>>>>>>>> REQUEST:
+GET /api2/json/nodes/pve/lxc/103/config HTTP/1.1
+Host: 192.168.2.18:8006
+User-Agent: Go-http-client/1.1
+Accept: application/json
+Authorization: PVEAPIToken=root@pam!terraform=bdeb84a5-2cc6-4b12-a135-e6b81d88366c
+Accept-Encoding: gzip
+
+2024/10/11 02:28:19 <<<<<<<<<< RESULT:
+HTTP/1.1 200 OK
+Content-Length: 432
+Cache-Control: max-age=0
+Connection: Keep-Alive
+Content-Type: application/json;charset=UTF-8
+Date: Fri, 11 Oct 2024 07:28:28 GMT
+Expires: Fri, 11 Oct 2024 07:28:28 GMT
+Pragma: no-cache
+Server: pve-api-daemon/3.0
+
+{"data":{"console":1,"swap":4096,"onboot":1,"cores":4,"hostname":"lxc-huly-srv","cpulimit":"0","tty":2,"unprivileged":1,"cmode":"tty","ostype":"ubuntu","net0":"name=eth0,bridge=vmbr0,gw=192.168.2.1,hwaddr=42:81:C4:7E:9B:17,ip=192.168.2.30/24,type=veth","cpuunits":1024,"memory":4096,"protection":0,"rootfs":"local-lvm:vm-103-disk-0,size=8G","features":"nesting=1","arch":"amd64","digest":"f204b0256be83042023ff75cb1815866952a6d94"}}
+2024/10/11 02:28:19 >>>>>>>>>> REQUEST:
+GET /api2/json/cluster/ha/resources/103 HTTP/1.1
+Host: 192.168.2.18:8006
+User-Agent: Go-http-client/1.1
+Accept: application/json
+Authorization: PVEAPIToken=root@pam!terraform=bdeb84a5-2cc6-4b12-a135-e6b81d88366c
+Accept-Encoding: gzip
+
+2024/10/11 02:28:19 <<<<<<<<<< RESULT:
+HTTP/1.1 500 no such resource 'ct:103'
+Connection: close
+Content-Length: 13
+Cache-Control: max-age=0
+Content-Type: application/json;charset=UTF-8
+Date: Fri, 11 Oct 2024 07:28:28 GMT
+Expires: Fri, 11 Oct 2024 07:28:28 GMT
+Pragma: no-cache
+Server: pve-api-daemon/3.0
+
+{"data":null}
+2024/10/11 02:28:19 >>>>>>>>>> REQUEST:
+GET /api2/json/pools HTTP/1.1
+Host: 192.168.2.18:8006
+User-Agent: Go-http-client/1.1
+Accept: application/json
+Authorization: PVEAPIToken=root@pam!terraform=bdeb84a5-2cc6-4b12-a135-e6b81d88366c
+Accept-Encoding: gzip
+
+2024/10/11 02:28:19 <<<<<<<<<< RESULT:
+HTTP/1.1 200 OK
+Content-Length: 11
+Cache-Control: max-age=0
+Connection: Keep-Alive
+Content-Type: application/json;charset=UTF-8
+Date: Fri, 11 Oct 2024 07:28:28 GMT
+Expires: Fri, 11 Oct 2024 07:28:28 GMT
+Pragma: no-cache
+Server: pve-api-daemon/3.0
+
+{"data":[]}
+[90mFri, 11 Oct 2024 02:28:19 -0500[0m [32mINF[0m [1mgithub.com/Telmate/terraform-provider-proxmox/v2/proxmox/util.go:158[0m[36m >[0m [1mEnabling the capture of log-library logs as ithe _capturelog flag was detected[0m
+[90mFri, 11 Oct 2024 02:28:19 -0500[0m [32mINF[0m [1mgithub.com/Telmate/terraform-provider-proxmox/v2/proxmox/util.go:191[0m[36m >[0m [1mLogging Started. Root Logger Set to level debug[0m

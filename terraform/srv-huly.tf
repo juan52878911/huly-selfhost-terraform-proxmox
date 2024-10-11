@@ -29,6 +29,10 @@ resource "proxmox_lxc" "lxc-huly-srv" {
   start        = true
   onboot       = true
 
+  memory = 4096
+  swap = 4096
+  cores = 4
+
   // Clave publica 
   ssh_public_keys = tls_private_key.rsa_key.public_key_openssh
 

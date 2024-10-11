@@ -64,7 +64,29 @@
         state: started
         enabled: true
 
-    - name: Verify Docker installation
+    - name: Copy huly compose file
+      ansible.builtin.copy:
+        src: ../huly-selfhost/compose.yaml
+        dest: /home/compose.yaml
+        mode: '0755'
+        remote_src: no
+    
+    - name: Install liveKit
       shell: |
-        docker --version
-        docker compose --version
+        curl -sSL https://get.livekit.io | bash
+
+    - name: Kill old containers
+      shell: |
+        docker stop $(docker ps -q) || true
+
+    - name: Kill old LiveKit servers
+      shell: |
+        pkill livekit-server || true
+
+    - name: Excecute LiveKit
+      shell: |
+        livekit-server --dev&
+
+    - name: Excecute Compose
+      shell: |
+        docker compose -f /home/compose.yaml up -d
